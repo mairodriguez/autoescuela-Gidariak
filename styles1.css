@@ -1,32 +1,37 @@
-*/{
+*/ {
     padding: 0;
     box-sizing: 0;
 }
+
 /* ----------header---------- */
-header{
-     display: flex;
+header {
+    display: flex;
     justify-content: space-between;
-   
+
 }
-.logo{
+
+.logo {
     width: 5%;
 }
-nav{
-    
-     width: 50%;
+
+nav {
+
+    width: 50%;
     height: 20%;
-   
+
 }
-.menu{
-    
+
+.menu {
+
     display: flex;
     justify-content: space-around;
     object-fit: cover;
     text-decoration: none;
     list-style-type: none;
 }
+
 /*------primerasec------ */
-.primerasect{
+.primerasect {
     height: 10%;
     padding: 2%;
     background-color: yellow;
@@ -34,20 +39,24 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-.primerasect h1{
+
+.primerasect h1 {
     font-size: 2rem;
 }
-.botonprimero{
+
+.botonprimero {
     width: 30%;
     padding: 1%;
     background-color: aliceblue;
     box-sizing: content-box;
     text-align: center;
 }
-.titulocaja{
+
+.titulocaja {
     margin-left: 5%;
 }
-.señor{
+
+.señor {
     width: 60%;
-  
+
 }
