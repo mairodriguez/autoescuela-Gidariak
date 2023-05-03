@@ -1,0 +1,53 @@
+*/{
+    padding: 0;
+    box-sizing: 0;
+}
+/* ----------header---------- */
+header{
+     display: flex;
+    justify-content: space-between;
+   
+}
+.logo{
+    width: 5%;
+}
+nav{
+    
+     width: 50%;
+    height: 20%;
+   
+}
+.menu{
+    
+    display: flex;
+    justify-content: space-around;
+    object-fit: cover;
+    text-decoration: none;
+    list-style-type: none;
+}
+/*------primerasec------ */
+.primerasect{
+    height: 10%;
+    padding: 2%;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.primerasect h1{
+    font-size: 2rem;
+}
+.botonprimero{
+    width: 30%;
+    padding: 1%;
+    background-color: aliceblue;
+    box-sizing: content-box;
+    text-align: center;
+}
+.titulocaja{
+    margin-left: 5%;
+}
+.señor{
+    width: 60%;
+  
+}
