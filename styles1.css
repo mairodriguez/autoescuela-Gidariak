@@ -4,15 +4,17 @@
 }
 /* ----------header---------- */
 header{
-     display: flex;
+    display: flex;
     justify-content: space-between;
-   
+    background-color: rgb(3, 3, 123);
+    color: white;
+    align-items: center;
 }
 .logo{
     width: 5%;
 }
 nav{
-    
+
      width: 50%;
     height: 20%;
    
@@ -27,6 +29,7 @@ nav{
 }
 /*------primerasec------ */
 .primerasect{
+    margin-top: 3%;
     height: 10%;
     padding: 2%;
     background-color: yellow;
@@ -50,4 +53,65 @@ nav{
 .señor{
     width: 60%;
   
+}
+/* ------SEGUNDASECTION------------ */
+.sectionlengse{
+    display: flex;
+    
+    justify-content: space-evenly;
+}
+.sectionlengse img{
+    width: 40%;
+    height: 40%;
+}
+.textolegseña{
+   width: 50%; 
+   padding: 2%;
+   text-align: center;
+  
+}
+#titulolenguasignos{
+    border-left: 5px solid rgb(251, 255, 0);
+   
+}
+.textolegseña h2{
+    font-size: 3rem;
+}
+/* ------cajas segunda section---- */
+#textrprin2sec{
+    font-size: 1.6rem;
+    margin: 3%;
+}
+.cajasgen2sec{
+    margin: 7%;
+   display: flex;
+   justify-content: space-evenly;
+}
+.cajasprin{
+    border: 5px solid yellow;
+    width: 20%;
+    text-align: center;
+    padding: 2%;
+}
+/* ---formlogin----- */
+.formlogin{
+    text-align: center;
+    font-size: 1.3rem;
+}
+/* --------CAJAS TERCERA SECTION----------- */
+.section3{
+    margin: 5%;
+}
+.cajagenprecio{
+    display: flex;
+    margin: 5%;
+    justify-content: space-evenly;
+}
+.cajaprecio{
+    border: 5px solid yellow;
+    padding: 2%;
+    font-size: 2rem;
+}
+.titulocajaprecio{
+    font-size: 1.4rem;
 }
