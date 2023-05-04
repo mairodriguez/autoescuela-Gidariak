@@ -1,41 +1,48 @@
-*/ {
+* {
+    margin: 0;
     padding: 0;
     box-sizing: 0;
 }
 
 /* ----------header---------- */
-header{
+header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(3, 3, 123);
+    background-color: #03037b;
     color: white;
     align-items: center;
 }
 
 .logo {
-    width: 5%;
+    width: 10%;
+    border-radius: 50%;
 }
-nav{
 
-     width: 50%;
+nav {
+
+    width: 50%;
     height: 20%;
 
 }
 
 .menu {
-
     display: flex;
     justify-content: space-around;
-    object-fit: cover;
-    text-decoration: none;
     list-style-type: none;
 }
 
+.click {
+    opacity: 0;
+}
+
+
 /*------primerasec------ */
-.primerasect{
+.sectionlengse{
+    height: 40%;
+}
+.primerasect {
+    
     margin-top: 3%;
-    height: 10%;
-    padding: 2%;
     background-color: yellow;
     display: flex;
     align-items: center;
@@ -52,6 +59,14 @@ nav{
     background-color: aliceblue;
     box-sizing: content-box;
     text-align: center;
+    border: 0;
+
+}
+
+.botonprimero:hover {
+    -webkit-transform: scale(1);
+    transform: scale(0.9);
+    box-shadow: 5px 5px 20px rgba(255, 183, 0, 0.574);
 }
 
 .titulocaja {
@@ -60,66 +75,211 @@ nav{
 
 .señor {
     width: 60%;
-  
+
 }
+
 /* ------SEGUNDASECTION------------ */
-.sectionlengse{
+.sectionlengse {
     display: flex;
-    
+
     justify-content: space-evenly;
 }
-.sectionlengse img{
+
+.sectionlengse img {
     width: 40%;
     height: 40%;
 }
-.textolegseña{
-   width: 50%; 
-   padding: 2%;
-   text-align: center;
-  
+
+.textolegseña {
+    width: 50%;
+    padding: 2%;
+    text-align: center;
+
 }
-#titulolenguasignos{
+
+#titulolenguasignos {
     border-left: 5px solid rgb(251, 255, 0);
-   
+
 }
-.textolegseña h2{
+
+.textolegseña h2 {
     font-size: 3rem;
 }
+
 /* ------cajas segunda section---- */
-#textrprin2sec{
+#textrprin2sec {
     font-size: 1.6rem;
     margin: 3%;
 }
-.cajasgen2sec{
+
+.cajasgen2sec {
     margin: 7%;
-   display: flex;
-   justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
-.cajasprin{
+
+.cajasprin {
     border: 5px solid yellow;
     width: 20%;
     text-align: center;
     padding: 2%;
 }
+
 /* ---formlogin----- */
-.formlogin{
+.formlogin {
     text-align: center;
     font-size: 1.3rem;
 }
+
 /* --------CAJAS TERCERA SECTION----------- */
-.section3{
+.section3 {
     margin: 5%;
 }
-.cajagenprecio{
+
+.cajagenprecio {
     display: flex;
     margin: 5%;
     justify-content: space-evenly;
 }
-.cajaprecio{
+
+.cajaprecio {
     border: 5px solid yellow;
     padding: 2%;
     font-size: 2rem;
 }
-.titulocajaprecio{
+
+.titulocajaprecio {
     font-size: 1.4rem;
+}
+footer{
+    height: 40%;
+    padding: 1%;
+    background-color: #03037b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.textofooter{
+    margin-left: 2%;
+    width: 80%;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+}
+
+.imgfooter img{
+    width: 40%;
+}
+
+/* ----------MEDIA QUERY---------------------- */
+/* -----nav responsive--------- */
+
+
+
+@media (max-width: 320px),
+(max-height: 480px) {
+    .click {
+        opacity: 1;
+    }
+    #click{
+        opacity: 0;
+    }
+    nav {
+       
+        width: fit-content;
+        margin: 5%;
+    }
+    nav .menu-btn i {
+        display: block;
+        
+        width: 50%;
+    }
+
+    nav ul {
+        position: fixed;
+        left: -100%;
+        background: #111;
+        height: 90vh;
+        /* width: 80%; */
+        text-align: center;
+        display: block;
+        flex-wrap: wrap;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        /* width: 100%; */
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+
+    }
+
+    /* ´--------SECTION1 MEDIAQERY-------------------- */
+    .primerasect {
+        flex-wrap: wrap;
+        margin: 1%;
+        text-align: center;
+        justify-content: center;
+
+    }
+    .botonprimero{
+        font-size: 0.6rem;
+        border-radius: 5%;
+    }
+    .primerasect img {
+        width: 50%;    
+    }
+    .titulocaja h1{
+        font-size: 1.3rem;
+    }
+
+    /* ---------------SEGUNDA SECTION MEDIA--------------- */
+    .sectionlengse {
+        flex-direction: column;
+
+    }
+
+    .textolegseña {
+        font-size: 1rem;
+    }
+
+    #titulolenguasignos h2 {
+        font-size: 1rem;
+    }
+    /*---------- -FOOTER MEDIA------------- */
+    .footer{
+        height: 40%;
+        padding: 1%;
+       
+    }
+    .textofooter{
+        margin-left: 2%;
+        width: 80%;
+        font-size: 50%;
+        display: flex;
+        text-align: center;
+    }
+    
+    .imgfooter img{
+        width: 40%;
+    }
+
+
 }
