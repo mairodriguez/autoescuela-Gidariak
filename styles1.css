@@ -7,13 +7,14 @@
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(3, 3, 123);
+    background-color: #03037b;
     color: white;
     align-items: center;
 }
 
 .logo {
-    width: 20%;
+    width: 10%;
+    border-radius: 50%;
 }
 
 nav {
@@ -29,8 +30,17 @@ nav {
     list-style-type: none;
 }
 
+.click {
+    opacity: 0;
+}
+
+
 /*------primerasec------ */
+.sectionlengse{
+    height: 40%;
+}
 .primerasect {
+    
     margin-top: 3%;
     background-color: yellow;
     display: flex;
@@ -140,16 +150,41 @@ nav {
 .titulocajaprecio {
     font-size: 1.4rem;
 }
+footer{
+    height: 40%;
+    padding: 1%;
+    background-color: #03037b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.textofooter{
+    margin-left: 2%;
+    width: 80%;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+}
+
+.imgfooter img{
+    width: 40%;
+}
 
 /* ----------MEDIA QUERY---------------------- */
 /* -----nav responsive--------- */
-input[type="checkbox"] {
-    display: none;
-}
+
 
 
 @media (max-width: 320px),
 (max-height: 480px) {
+    .click {
+        opacity: 1;
+    }
+    #click{
+        opacity: 0;
+    }
     nav {
        
         width: fit-content;
@@ -200,11 +235,18 @@ input[type="checkbox"] {
         flex-wrap: wrap;
         margin: 1%;
         text-align: center;
+        justify-content: center;
 
     }
-
+    .botonprimero{
+        font-size: 0.6rem;
+        border-radius: 5%;
+    }
     .primerasect img {
-        width: 80%;
+        width: 50%;    
+    }
+    .titulocaja h1{
+        font-size: 1.3rem;
     }
 
     /* ---------------SEGUNDA SECTION MEDIA--------------- */
@@ -219,6 +261,23 @@ input[type="checkbox"] {
 
     #titulolenguasignos h2 {
         font-size: 1rem;
+    }
+    /*---------- -FOOTER MEDIA------------- */
+    .footer{
+        height: 40%;
+        padding: 1%;
+       
+    }
+    .textofooter{
+        margin-left: 2%;
+        width: 80%;
+        font-size: 50%;
+        display: flex;
+        text-align: center;
+    }
+    
+    .imgfooter img{
+        width: 40%;
     }
 
 
