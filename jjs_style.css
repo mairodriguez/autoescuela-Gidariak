@@ -296,7 +296,119 @@
 
 }
 
-@media (max-width:320px),(max-height:480px) {
+@media (max-width:320px),
+(max-height:480px) {
+    .art1 {
+        display: flex;
+        flex-flow: column;
+
+    }
+
+    .art1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art1 h3 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art1 input {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art2 {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .art2 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art2 h3 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art2 input {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .art3 {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .art3 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art3 h3 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art3 input {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art4 {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .art4 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art4 h3 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art4 input {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art5 {
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .art5 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art5 h3 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .art5 input {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:768px),
+(max-height:1024px) {
+    .art1 {
+        display: flex;
+        flex-flow: column;
+    }
+    
+
     .art2 {
         display: flex;
         flex-flow: column;
@@ -318,26 +430,5 @@
     }
 }
 
-@media  (max-width:768px),(max-height:1024px){
-
-    .art2 {
-        display: flex;
-        flex-flow: column;
-    }
-
-    .art3 {
-        display: flex;
-        flex-flow: column;
-    }
-
-    .art4 {
-        display: flex;
-        flex-flow: column;
-    }
-
-    .art5 {
-        display: flex;
-        flex-flow: column;
-    }
-}
-
+@media (max-width:1144px),
+(max-height:3144px) {}
