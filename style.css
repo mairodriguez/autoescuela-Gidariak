@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*factura/reservation curso*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.primero{
+    border: 8px solid #FAFF00;
+    width: 50%;
+}
+.primero h2{
+font-size: 64px;
+line-height: 77px;
+text-align: center;
+}
+.segundo{
+    background-color: #E5E5E5;
+    width: 50%;
+    text-align: center;
+}
+#curso{
+    width: 50%;
+    height: 5%;
+    background-color: #ffffff;
+
+}
+#dinero{
+    width: 100%;
+}
+.tercero{
+    flex-flow: row;
+    border-bottom: 3px solid black;
+}
+.tercero label{
+    border-left: 5px solid #FAFF00;
+    padding: 8px;
+    font-weight: 500;
+}
+.tercero input{
+    width: 25%;
+    border: none;
+}
+#btn{
+   width: 23%;
+   font-weight: 700;
+   background-color: #FAFF00;
+   margin: 2%;
+   padding: 1%;
+   text-align: center;
+   border: none;
+   
+}
+#btn:hover{
+    background-color:#14213D;
+    color:#ffffff
+}
+.cuarto{
+    text-align: end;
+    border-bottom: 3px solid black;
+    padding: 2%;
+}
+.cuarto label{
+    font-weight: 500;
+    margin-right: 70%;
+}
+.cuarto input{
+    text-align: end;
+    width: 15%;
+    border: none;
+}
+#precio{
+   margin-left: 4%;
+}
+.quinto{
+    padding: 2%;
+    text-align: end;
+
+}
+.quinto label{
+    font-weight: 900;
+    font-size:xx-large;
+    margin-right: 50%;   
+    
+}
+
+#total{
+    width: 15%;
+    text-align: end;
+    border: none;
+}
+#cp{
+    background-color: grey;
+    border: none;
+   
+}
+#code{
+    font-size: medium;
+    font-weight: 500;
+}
+
