@@ -312,6 +312,7 @@
     .art1 h3 {
         width: 100%;
         height: 100%;
+        font-size: 2em;
     }
 
     .art1 input {
@@ -332,6 +333,7 @@
     .art2 h3 {
         width: 100%;
         height: 100%;
+        font-size: 2em;
     }
 
     .art2 input {
@@ -353,6 +355,7 @@
     .art3 h3 {
         width: 100%;
         height: 100%;
+        font-size: 2em;
     }
 
     .art3 input {
@@ -373,6 +376,7 @@
     .art4 h3 {
         width: 100%;
         height: 100%;
+        font-size: 2em;
     }
 
     .art4 input {
@@ -393,6 +397,7 @@
     .art5 h3 {
         width: 100%;
         height: 100%;
+        font-size: 2em;
     }
 
     .art5 input {
@@ -401,13 +406,15 @@
     }
 }
 
+
+/* 
 @media (max-width:768px),
 (max-height:1024px) {
     .art1 {
         display: flex;
         flex-flow: column;
     }
-    
+
 
     .art2 {
         display: flex;
@@ -431,4 +438,4 @@
 }
 
 @media (max-width:1144px),
-(max-height:3144px) {}
+(max-height:3144px) {} */
