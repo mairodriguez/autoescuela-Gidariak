@@ -4,6 +4,43 @@
     box-sizing: 0;
 }
 
+/* ----------header---------- */
+.helmet {
+    display: flex;
+    justify-content: space-between;
+    background-color: #03037b;
+    color: white;
+    align-items: center;
+}
+
+.logo {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.nav-bar {
+    position: relative;
+    width: 10%;
+    height: 20%;
+    margin-bottom: 3%;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.click {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+
+}
+
 /* main de ofertas*/
 .main-ofertas {
     margin-top: 20px;
@@ -23,7 +60,7 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
@@ -43,7 +80,7 @@
 
 .div1 h2 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
@@ -62,7 +99,7 @@
 
 .div2 h2 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
@@ -87,7 +124,7 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
     display: flex;
     flex-flow: row;
 }
@@ -100,7 +137,7 @@
 
 .art1 h3 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
@@ -129,7 +166,7 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
     display: flex;
     flex-flow: row;
 
@@ -137,7 +174,7 @@
 
 .art2 h3 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
@@ -172,14 +209,14 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
     display: flex;
     flex-flow: row;
 }
 
 .art3 h3 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
@@ -215,14 +252,14 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
     display: flex;
     flex-flow: row;
 }
 
 .art4 h3 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
@@ -259,7 +296,7 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
     display: flex;
     flex-flow: row;
 
@@ -267,7 +304,7 @@
 
 .art5 h3 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #000000;
 }
@@ -296,17 +333,121 @@
 
 }
 
+/*posicionamito del footer*/
+footer {
+    height: 40%;
+    padding: 1%;
+    background-color: #03037b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.textofooter {
+    margin-left: 2%;
+    width: 80%;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+}
+
+.imgfooter img {
+    width: 40%;
+}
+
 @media (max-width:320px),
 (max-height:480px) {
+    .helmet {
+        width: 100%;
+        height: 100%;
+    }
+
+    .click {
+        background-color: #FFEE32;
+        opacity: 1;
+
+
+    }
+
+    #click {
+        opacity: 0;
+    }
+
+    .nav-bar .menu-btn i {
+        display: block;
+        width: 50%;
+
+
+    }
+
+    .nav-bar ul {
+        position: fixed;
+        left: -100%;
+        background: #111;
+        height: 90vh;
+        /* width: 80%; */
+        text-align: center;
+        display: block;
+        flex-wrap: wrap;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    .nav-bar ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .nav-bar ul li a {
+        /* width: 100%; */
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+
+    }
+
+    .main-ofertas {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        height: 100%;
+    }
+
+    .section1-ofertas {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+    }
+
     .art1 {
         display: flex;
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
 
     }
 
     .art1 img {
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 80%;
+
     }
 
     .art1 h3 {
@@ -323,11 +464,16 @@
     .art2 {
         display: flex;
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
     }
 
     .art2 img {
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 80%;
+
     }
 
     .art2 h3 {
@@ -345,11 +491,17 @@
     .art3 {
         display: flex;
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+
     }
 
     .art3 img {
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 80%;
+
     }
 
     .art3 h3 {
@@ -366,11 +518,17 @@
     .art4 {
         display: flex;
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+
     }
 
     .art4 img {
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 80%;
+
     }
 
     .art4 h3 {
@@ -387,11 +545,16 @@
     .art5 {
         display: flex;
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 20%;
     }
-    
+
     .art5 img {
-        width: 100%;
-        height: 100%;
+        width: 70%;
+        height: 80%;
+
     }
 
     .art5 h3 {
@@ -404,10 +567,32 @@
         width: 100%;
         height: 100%;
     }
+
+    /*---------- -FOOTER MEDIA------------- */
+    .footer {
+        height: 40%;
+        padding: 1%;
+
+
+    }
+
+    .textofooter {
+        margin-left: 2%;
+        width: 80%;
+        font-size: 50%;
+        display: flex;
+        text-align: center;
+    }
+
+    .imgfooter img {
+        width: 40%;
+    }
+
+
 }
 
-
 /* 
+
 @media (max-width:768px),
 (max-height:1024px) {
     .art1 {
