@@ -589,6 +589,71 @@ footer {
         width: 40%;
     }
 
+    .main-registro {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    /* MEDIA REGISTRO*/
+    .registro {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        margin-top: 1%;
+    }
+
+    .registro h1 {
+        font-size: 2em;
+    }
+
+    .registro input {
+        width: 100%;
+        height: 10%;
+        margin-top: 1%;
+    }
+
+    .registro button {
+        width: 100%;
+        height: 10%;
+        margin-top: 1%;
+    }
+
+    .registro a {
+        width: 100%;
+        height: 10%;
+        margin-top: 1%;
+    }
+
+    .registro p {
+        width: 100%;
+        height: 10%;
+        margin-top: 1%;
+    }
+
+    .registro label {
+        width: 100%;
+        height: 10%;
+        margin-top: 1%;
+        font-size: 1em;
+    }
+
+    .registro select {
+        width: 100%;
+        height: 10%;
+        margin-top: 1%;
+    }
+
+
+
 
 }
 
@@ -625,3 +690,76 @@ footer {
 
 @media (max-width:1144px),
 (max-height:3144px) {} */
+
+
+
+
+/* posicionamiento del regisdtro*/
+.main-registro {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.registro {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.registro h1 {
+    font-size: 2em;
+    margin-bottom: 2%;
+}
+
+.registro input {
+    width: 50%;
+    height: 5%;
+    margin-bottom: 2%;
+}
+
+.registro button {
+    width: 50%;
+    height: 5%;
+    margin-bottom: 2%;
+}
+
+.registro a {
+    font-size: 1.5em;
+    margin-bottom: 2%;
+}
+
+.registro a:hover {
+    color: #ff0000;
+}
+
+.registro p {
+    font-size: 1.5em;
+    margin-bottom: 2%;
+}
+
+.registro p:hover {
+    color: #ff0000;
+}
+
+.registro label {
+    font-size: 1.5em;
+    margin-bottom: 2%;
+}
+
+.registro label:hover {
+    color: #ff0000;
+}
+
+.registro select {
+    width: 50%;
+    height: 5%;
+    margin-bottom: 2%;
+}
