@@ -20,9 +20,9 @@ header {
 
 nav {
     position: relative;
-   width: 10%;
-   height: 20%;
-   margin-bottom: 3%;
+    width: 50%;
+    height: 20%;
+     margin-bottom: 3%;
 
 }
 .menu {
@@ -33,6 +33,10 @@ nav {
 .click { 
     opacity: 0;
     position: absolute;
+}
+.menu1{
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -194,6 +198,9 @@ footer{
     nav .menu-btn i {
         display: block;
         width: 50%;  
+    }
+    nav{
+        width: 10%;
     }
     nav ul {
         position: fixed;

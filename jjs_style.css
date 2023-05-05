@@ -20,29 +20,22 @@
 
 .nav-bar {
     position: relative;
-    width: 10%;
+    width: 50%;
     height: 20%;
     margin-bottom: 3%;
-    margin-inline-start: 50%;
 
 }
-
 .menu {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
 }
-
 .click {
     position: absolute;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-
-
 }
-
-/* main de ofertas*/
+/*------------------ main de ofertas----------------------------*/
 .main-ofertas {
     margin-top: 20px;
     margin-bottom: 20px;
