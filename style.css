@@ -43,7 +43,7 @@ nav{
 .primero{
     
     border: 8px solid #FAFF00;
-    width: 48%;
+    width: 50%;
 }
 .primero h2{
 font-size: 64px;
@@ -51,9 +51,9 @@ line-height: 77px;
 text-align: center;
 }
 .segundo{
+    width: 50%;
     padding-top: 1%;
     background-color: #E5E5E5;
-    width: 48%;
     text-align: center;
 }
 #curso{
@@ -139,177 +139,161 @@ text-align: center;
 .btn3{
     margin-bottom: 5%;
 }
+footer{
+    height: 40%;
+    padding: 1%;
+    background-color: #03037b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.textofooter{
+    margin-left: 2%;
+    width: 80%;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+}
 
-/*responsive */
-/* Extra small devices (phones, 480px and down) */
+.imgfooter a{
+    width: 50%;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: 0.2rem solid #ffffff;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/*responsive*/
 @media (max-width: 320px), (max-height:480px){
     .container{
         display: flex;
         flex-flow: column;
         margin: 1%;
         
-        }
+        
+    }
     .primero{
         
         border: 8px solid #FAFF00;
         width: 320px;
     }
-  
-    
     .primero h2{
-        font-size: 10px;
-        line-height: 50px;
-        text-align: center;
-        }
-        
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    }
     .segundo{
-            padding-top: 3%;
-            padding-inline: 1%;
-            background-color: #E5E5E5;
-            width: 100%;
-            text-align: center;
-        }
-        .tercero{
-            
-            border-bottom: 3px solid black;
-        }
-        .tercero label{
-            border-left: 2px solid #FAFF00;
-            padding: 2px;
-            font-weight: 500;
-        }
-        .tercero input{
-            width: 95%;
-            border: none;
-            
-          
-        }
-        .btn{
-           width: 50%;
-           font-weight: 700;
-           background-color: #FAFF00;
-           margin: 2%;
-           padding: 1%;
-           text-align: center;
-           border: none;
-           
-        }
-        .btn:hover{
-            background-color:#14213D;
-            color:#ffffff
-        }
-        .cuarto{
-           border-bottom: 3px solid black;
-          
-        }
-        .cuarto label{
-            
-            font-weight: 800;
-            
-        }
-        .cuarto input{
-            margin-inline: 30%;
-            width: 20%;
-            border: none;
-        }
-       
-        .quinto{
-            padding: 2%;
-            text-align: end;
+        padding-top: 1%;
+        background-color: #E5E5E5;
+        width: 320px;
+        text-align: center;
+    }
+    #curso{
+        width: 50%;
+        height: 5%;
+        background-color: #ffffff;
+    
+    }
+    #dinero{
+        width: 100%;
+    }
+    .tercero{
         
-        }
-        .quinto label{
-            font-weight: 900;
-            font-size:medium;
-            margin-right: 50%;   
-            
-        }
-        #total{
-            width: 15%;
-            text-align: end;
-            border: none;
-        }
-    
-    
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
- @media  (max-width: 768px), (max-height: 600px ){
-    .container{
         display: flex;
         flex-flow: column;
-        margin: 1%;
-        background-color: #FAFF00;
-        
-        }
-    .primero{
-        border: 8px solid #FAFF00;
-        width: 86%;
-        padding-inline-end: 5%;
-        padding-top: 8%;
-        
+       
+        border-bottom: 1px solid black;
     }
-    .primero h2{
-        font-size: 40px;
-        line-height: 35px;
-        text-align: center;
-        }
-
-    .segundo{
-            padding-top: 1%;
-            background-color: #E5E5E5;
-            width: 86%;
-            text-align: center;
-        }
-
-    .tercero{
-            display: flex;
-            flex-direction: column;
-            padding: 1%;
-            
-            }
     .tercero label{
-            border-left: 3px solid #FAFF00;
-            padding: 2px;
-            margin: 5px;
-            font-weight: 500;
-            text-align: left;
-            margin-inline: 25%;
-        }
+        border-left: none;
+        font-size: 15px;
+        font-weight: 500;
+    }
     .tercero input{
         
-            text-align: center;
-            width: 50%;
-            border: none;
-            margin: 0 auto ;
-            
-        }
-    .cuarto{
-            
-            
-            border-bottom: 3px solid black;
-            padding: 2%;
-        }
-
+        width: 60%;
+        border: none;
+        margin: auto;
+        text-align: center;
+    }
+    .btn{
+       width: 30%;
+       font-weight: 200;
+       background-color: #FAFF00;
+       margin: 2%;
+       padding: 1%;
+       text-align: center;
+       border: none;
        
-        .cuarto label{
-            margin-inline: 40%;
-            font-weight: 700;
-            margin-right: 70%;
-        }
-        .cuarto input{
-            margin-inline: 40%;
-            text-align: end;
-            width: 15%;
-            border: none;
-        }
-        .quinto label{
-            font-weight: 900;
-            font-size:large;
-            margin-right: 50%;   
-            
-        }
+    }
+    .btn:hover{
+        background-color:#14213D;
+        color:#ffffff
+    }
+    .cuarto{
+        text-align: end;
+        border-bottom: 3px solid black;
+        padding: 2%;
+    }
+    .cuarto label{
+        font-weight: 500;
+        margin-right: 70%;
+    }
+    .cuarto input{
+        text-align: end;
+        width: 15%;
+        border: none;
+    }
+    #precio{
+       margin-left: 4%;
+    }
+    .quinto{
+        padding: 2%;
+        text-align: end;
+    
+    }
+    .quinto label{
+        font-weight: 900;
+        font-size:medium;
+        margin-right: 50%;   
         
+    }
+    
+    #total{
+        width: 15%;
+        text-align: end;
+        border: none;
+    }
+    #cp{
+        background-color: grey;
+        border: none;
+       
+    }
+    #code{
+        font-size: small;
+        font-weight: 500;
+    }
+    .btn3{
+        margin-bottom: 5%;
+    }
 
-} 
+    .imgfooter a{
+        width: 15%;
+        height: 1rem;
+        width: 1rem;
+        line-height: 4rem;
+        border-radius: 50%;
+        font-size: 1rem;
+        border: 0.2rem solid #ffffff;
+        color: #ffffff;
+        text-align: center;
+    }
 
+}
