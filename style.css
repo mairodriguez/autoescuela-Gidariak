@@ -36,6 +36,7 @@ nav{
 .container{
     display: flex;
     flex-flow: row;
+    position: relative;
     margin: 1%;
     
     
@@ -44,6 +45,7 @@ nav{
     
     border: 8px solid #FAFF00;
     width: 50%;
+    padding-top: 4%;
 }
 .primero h2{
 font-size: 64px;
@@ -55,11 +57,13 @@ text-align: center;
     padding-top: 1%;
     background-color: #E5E5E5;
     text-align: center;
+    
 }
 #curso{
     width: 50%;
     height: 5%;
     background-color: #ffffff;
+    margin: 2%;
 
 }
 #dinero{
@@ -67,19 +71,40 @@ text-align: center;
 }
 .tercero{
     
-    flex-flow: row;
+    display: flex;
+    flex-flow: column;
+    margin-top: 5%;
     border-bottom: 3px solid black;
+    position: relative;
+    
 }
+
 .tercero label{
-    border-left: 5px solid #FAFF00;
+    
     padding: 8px;
     font-weight: 500;
+    
 }
 .tercero input{
     width: 25%;
     border: none;
+    margin-inline: 40%;
+    
+    
 }
+#tfinal{
+    margin-bottom: 15%;
+}
+.btn1{
+  margin: 0;
+  position: absolute;
+  top:70%;
+  left: 40%;
+
+}
+
 .btn{
+    
    width: 20%;
    font-weight: 700;
    background-color: #FAFF00;
@@ -87,6 +112,7 @@ text-align: center;
    padding: 1%;
    text-align: center;
    border: none;
+   
    
 }
 .btn:hover{
@@ -111,6 +137,8 @@ text-align: center;
    margin-left: 4%;
 }
 .quinto{
+    text-align: end;
+    border-bottom: 3px solid black;
     padding: 2%;
     text-align: end;
 
@@ -172,7 +200,61 @@ footer{
 
 /*responsive*/
 @media (max-width: 320px), (max-height:480px){
+    /* inicio de nav*/
+    .click {
+        opacity: 1;
+    }
+    #click{
+        opacity: 0;
+    }
+    nav {
+       
+        width: fit-content;
+        margin: 5%;
+    }
+    nav .menu-btn i {
+        display: block;
+        
+        width: 50%;
+    }
+
+    nav ul {
+        position: fixed;
+        left: -100%;
+        background: #111;
+        height: 90vh;
+        /* width: 80%; */
+        text-align: center;
+        display: block;
+        flex-wrap: wrap;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        /* width: 100%; */
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+
+    }
+
+    /* fin de nav*/
     .container{
+        position: relative;
         display: flex;
         flex-flow: column;
         margin: 1%;
@@ -223,6 +305,14 @@ footer{
         margin: auto;
         text-align: center;
     }
+    .btn1{
+        margin: 0;
+        position: absolute;
+        top:80%;
+        left: 30%;
+        
+      
+      }
     .btn{
        width: 30%;
        font-weight: 200;
@@ -233,10 +323,12 @@ footer{
        border: none;
        
     }
+
     .btn:hover{
         background-color:#14213D;
         color:#ffffff
     }
+ 
     .cuarto{
         text-align: end;
         border-bottom: 3px solid black;

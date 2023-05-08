@@ -19,48 +19,57 @@
             </ul>
         </nav> 
     </header>
-    <section class="container">
-      <div class="primero">
+    <main class="container">
+      <section class="primero">
         <h2>
           Go ! empieza tu viaje... Revisa tu informacion y compra el curso
         </h2>
         <img src="imagenes/photo factura.jpg" alt="" id="dinero" />
-      </div>
-      
-      <div class="segundo">
-        <input id="curso" type="text" /><br><br>
-        <h2>Adresse:Carr. Bilbao-Galdakao, 10, 48004 Bilbao, Biscay</h2>
-        <h3>Téléphone : 944 02 93 00</h3> <br><br>
 
-        <div class="tercero">
+      </section>
+      
+      
+      <section class="segundo">
+        <input id="curso" type="text" />
+        <h2>Adresse:Carr. Bilbao-Galdakao, 10, 48004 Bilbao, Biscay</h2>
+        <h3>Téléphone : 944 02 93 00</h3> 
+
+        <article class="tercero">
 
         <label for="">Fecha inicio</label>
         <input type="date" name="" id="inicio" />
 
         <label for="">Fecha final</label>
-        <input type="date" name="" id="final" /><br><br><br>
+        <input type="date" name="" id="final" />
+
+        
 
         <label for="">Hora inicio</label>
         <input type="time" name="" id="tinicio" />
 
         <label for="">Hora final</label>
-        <input type="time" name="" id="tfinal" /> <br><br><br>
+        <input type="time" name="" id="tfinal" /> 
 
-        <input type="button" value="Verificar la disponibilidad" class="btn btn1">
-      
-        </div>
+        
         
 
-        <div class="cuarto">
+        
+        <button class="btn btn1" id="btn">Verificar la disponibilidad</button>
+         <p id="demo"></p>
+      
+        </article>
+        
+
+        <article class="cuarto">
             <label for="">Precio:</label>
             <input type="number" name="" placeholder="20000€" id="precio" /><br><br><br>
     
             <label for="">Descuentos:</label>
             <input type="number" name="" placeholder="500€" id="descuento" /> 
             
-        </div>
+        </article>
 
-        <div class="quinto">
+        <article class="quinto">
 
             <label for="">Total a pagar:</label>
             <input type="number" name="" placeholder="€" id="total" /> <br><br>
@@ -70,12 +79,13 @@
             <input type="number" name="" id="cp" />
             <input type="button" value="validar" class="btn btn2">
 
-        </div>
+        </article>
 
         <input type="button" value="ir a pagar" class="btn btn3">
         
-      </div>
-    </section>
+      </section>
+      
+    </main>
     <footer>
       <div class="textofooter">
           <p class="textofooter">Política de privacidad</p>
@@ -89,5 +99,6 @@
         <a href="#" class="fab fa-linkedin"></a>
       </div>
   </footer>
+<script src="js.js"></script>
   </body>
 </html>
