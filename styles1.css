@@ -206,7 +206,6 @@ footer{
 (max-height: 480px) {
     header {
         position: fixed;
-        margin-bottom: 40%;
     }
 
     .titulocaja {
