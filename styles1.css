@@ -147,6 +147,7 @@ nav {
     border: 5px solid yellow;
     padding: 2%;
     font-size: 2rem;
+   
 }
 .textocajaprecio{
     text-decoration: none;
@@ -156,6 +157,15 @@ nav {
 .titulocajaprecio {
     font-size: 1.4rem;
 }
+.sectmapa{
+    align-items: center;
+}
+#mapa{
+    width: 50%;
+    border-radius: 20px;
+    
+}
+/* ----------FOOTER----------- */
 footer{
     height: 40%;
     padding: 1%;
