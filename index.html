@@ -6,21 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gidariak</title>
-     <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles1.css">
 </head>
 
 <body>
     <header>
-        <img class="logo" src="/img/logo autoescuela.png" alt="logo">
-        <nav >
-          <img class="click" src="/img/menu.png" alt="">  
-        <input type="checkbox" class="click" id="click">
-         <label for="click" class="menu-btn">
-         <i class="fas fa-bars"></i>
-         </label>
+        <img class="logo" src="./img/logo autoescuela.png" alt="logo">
+        <nav>
+            <img class="click" src="./img/menu.png" alt="menu">
+            <input type="checkbox" class="click" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
             <ul class="menu">
-                <li class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li>
-                <li class="menu1"> <img src="./img/usuario.png" alt="">  log in</li>
+                <li><a href="/index.html" class="menu1">Inicio</a></li>
+                <li class="menu1"> <a href="#contacto" class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li></a>
+                <li class="menu1"> <img src="./img/usuario.png" alt="usuario"> log in</li>
                 <li> <img src="./img/ajustes.png" alt="log up"> log up</li>
             </ul>
         </nav>
@@ -30,9 +31,9 @@
             <section class="primerasect">
                 <div class="titulocaja">
                     <h1>Tú también te mereces <br>
-                    Tu carnet, a la primera</h1>
-                   
-                    <p class="botonprimero">100% accesible</p>
+                        Tu carnet, a la primera</h1>
+
+                    <p class="botonprimero"><a href="./ofertas_cursos.html" class="botonprimero">100% accesible</p></a>
                 </div>
                 <figure>
                     <img class="señor" src="./img/hombre2.png" alt="Hombre pensando">
@@ -44,7 +45,7 @@
                         <div id="titulolenguasignos">
                             <h2>Tu carnet con un interprete de lengua de signos</h2>
                         </div>
-                        <p>Somos una auto inclusiva y queremos que tengas las
+                        <p id="textograndeseña">Somos una auto inclusiva y queremos que tengas las
                             mismas oportunidades para sacarte el carnet. Por
                             eso, si tienes una discapacidad auditiva, tranqui,
                             te facilitamos el acceso a las clases teóricas dándote
@@ -87,20 +88,21 @@
                 <div class="formlogin">
                     <p>Comprar tu curso enviándonos un email a <br> <b>maieslamáslinda@escierto.com</b> o ven a nuestra
                         sede.</p>
-                    <button class="registro">Registrate</button>
+                    <button class="registro"><a href="./form-registros.html">Registrate</a></button>
                 </div>
 
             </section>
             <section class="section3">
+
                 <h2 class="titulocajaprecio">Precios</h2>
                 <p>A los precios de teórica+prácticas hay
                     que sumarle el coste del intérprete en lengua de signos que tú traigas.
                     Si vienes con amigxs podéis compartir ese coste.</p>
                 <div class="cajagenprecio">
-                    <div class="cajaprecio">
-                        <h3 class="titulocajaprecio">La teoría</h3>
-                        <p>39€</p>
-                    </div>
+                    <div class="cajaprecio"><a href="./factura.html" class="textocajaprecio">
+                            <h3 class="titulocajaprecio">La teoría</h3>
+                            <p>39€</p>
+                    </div></a>
                     <div class="cajaprecio">
                         <h3 class="titulocajaprecio"> Interprete Especializado</h3>
                         <p>Tú traes tu propio interprete</p>
@@ -110,23 +112,29 @@
                         <p>29€</p>
                         <p>37€</p>
                     </div>
-            </section>
+                </div>
+                <article class="sectmapa">
+                    <div class="mapa">
+                        <img id="mapa" src="/img/mapa_españa.jpg" alt="mapa">
+                    </div>
+                </article>
+            </section>  
         </section>
     </main>
     <footer>
         <div class="textofooter">
-            <p class="textofooter">Política de privacidad</p>
+            <p class="textofooter"> <a name="contacto">Política de privacidad</p></a>
             <p class="textofooter">Cookies</p>
             <p class="textofooter">Política de Compras</p>
         </div>
         <div class="imgfooter">
-            <img src="/img/facebook.png" alt="Redes"/>
-            <img src="/img/telegrama.png" alt="Redes"/>
-            <img src="/img/logotipo-de-instagram.png" alt="Redes"/>
-            <img src="/img/gorjeo.png" alt="Redes"/>
+            <img src="/img/facebook.png" alt="Redes" />
+            <img src="/img/telegrama.png" alt="Redes" />
+            <img src="/img/logotipo-de-instagram.png" alt="Redes" />
+            <img src="/img/gorjeo.png" alt="Redes" />
         </div>
     </footer>
-    
+
 </body>
 
 </html>
