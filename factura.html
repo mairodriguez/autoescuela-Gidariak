@@ -1,104 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>autoescuela-Gidariak</title>
-  </head>
-  <body>
-    <header>
-        <img class="logo" src="./img/logo autoescuela.png" alt="logo">
-        <nav >
-            <ul class="menu">
-                <li class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li>
-                <li class="menu1"> <img src="./img/usuario.png" alt="usuario">  log in</li>
-                <li> <img src="./img/ajustes.png" alt="log up"> log up</li>
-            </ul>
-        </nav> 
-    </header>
-    <main class="container">
-      <section class="primero">
-        <h2>
-          Go ! empieza tu viaje... Revisa tu informacion y compra el curso
-        </h2>
-        <img src="imagenes/photo factura.jpg" alt="" id="dinero" />
 
-      </section>
-      
-      
-      <section class="segundo">
-        <input id="curso" type="text" />
-        <h2>Adresse:Carr. Bilbao-Galdakao, 10, 48004 Bilbao, Biscay</h2>
-        <h3>Téléphone : 944 02 93 00</h3> 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>autoescuela-Gidariak</title>
+</head>
 
-        <article class="tercero">
+<body>
+  <header>
+    <img class="logo" src="./img/logo autoescuela.png" alt="logo">
+    <nav>
+      <ul class="menu">
+        <li class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li>
+        <li class="menu1"> <img src="./img/usuario.png" alt="usuario"> log in</li>
+        <li> <img src="./img/ajustes.png" alt="log up"> log up</li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="primero">
+      <h2>
+        Go ! empieza tu viaje... Revisa tu informacion y compra el curso
+      </h2>
+      <img src="imagenes/photo factura.jpg" alt="" id="dinero" />
 
-          <label for="">Fecha inicio</label>
-          <input type="date" name="party" min="2023-05-08" max="2023-05-31"/>
+    </section>
+
+
+    <section class="segundo">
+      <input id="curso" oninput="cursos()" type="text" disabled />
+      <h2>Adresse:Carr. Bilbao-Galdakao, 10, 48004 Bilbao, Biscay</h2>
+      <h3>Téléphone : 944 02 93 00</h3>
+
+      <article class="tercero">
+
+        <label for="">Fecha inicio</label>
+        <input type="date"  name="party" min="2023-05-08" max="2023-05-31" />
 
         <label for="">Fecha final</label>
         <input type="date" name="" id="final" />
 
-        
 
-          <label for="">Hora inicio</label>
-          <input type="time" name="" id="tinicio" />
+
+        <label for="">Hora inicio</label>
+        <input type="time" name="" id="tinicio" />
 
         <label for="">Hora final</label>
-        <input type="time" name="" id="tfinal" /> 
+        <input type="time" name="" id="tfinal" />
 
-        
-        
 
-        
+
+
+
         <button class="btn btn1" id="btn">Verificar la disponibilidad</button>
-         <p id="demo"></p>
-      
-        </article>
-        
+        <p id="demo"></p>
 
-        <article class="cuarto">
-            <label for="">Precio:</label>
-            <input type="number" name="" placeholder="20000€" id="precio" /><br><br><br>
-    
-            <label for="">Descuentos:</label>
-            <input type="number" name="" placeholder="500€" id="descuento" /> 
-            
-        </article>
-
-        <article class="quinto">
-
-            <label for="">Total a pagar:</label>
-            <input type="number" name="" placeholder="€" id="total" /> <br><br>
+      </article>
 
 
-            <label for="" id="code">codigo promocional:</label>
-            <input type="number" name="" id="cp" />
-            <input type="button" value="validar" class="btn btn2">
+      <article class="cuarto">
+        <label for="">Precio:</label>
+        <input type="number" name="" placeholder="precio€" id="precio" /><br><br><br>
 
-        </article>
+        <label for="">Descuentos:</label>
+        <input type="number" name="" placeholder="precio€" id="descuento" />
 
-        <input type="button" value="ir a pagar" class="btn btn3">
-        
-      </section>
-      
-    </main>
-    <footer>
-      <div class="textofooter">
-          <p class="textofooter">Política de privacidad</p>
-          <p class="textofooter">Cookies</p>
-          <p class="textofooter">Política de Compras</p>
-      </div>
-      <div class="imgfooter">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-      </div>
+      </article>
+
+      <article class="quinto">
+
+        <label for="">Total a pagar:</label>
+        <input type="number" name="" placeholder="€" id="total" /> <br><br>
+
+
+        <label for="" id="code">codigo promocional:</label>
+        <input type="number" name="" id="cp" />
+        <input type="button" value="validar" class="btn btn2">
+
+      </article>
+
+      <input type="button" value="ir a pagar" class="btn btn3">
+
+    </section>
+
+  </main>
+  <footer>
+    <div class="textofooter">
+      <p class="textofooter">Política de privacidad</p>
+      <p class="textofooter">Cookies</p>
+      <p class="textofooter">Política de Compras</p>
+    </div>
+    <div class="imgfooter">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+    </div>
   </footer>
-<script src="js.js"></script>
-  </body>
+  <script src="./jjs.js"></script>
+</body>
+
 </html>
