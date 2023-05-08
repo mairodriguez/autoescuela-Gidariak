@@ -766,3 +766,53 @@ footer {
     height: 5%;
     margin-bottom: 2%;
 }
+
+
+
+/* Posicionamiento del log in*/
+.sect_login{
+    margin-inline: 20%;
+    margin-block: 20%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
+    width: 50%;
+    height: 100%;
+}
+.sect_login form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #03037b;
+    border: 5% solid grey;
+    border-radius: 10%;
+    width: 94%;
+    height: 100%;
+
+}
+.sect_login form h1{
+    font-size: 2em;
+    margin-bottom: 2%;
+    color: #03037b;
+    
+}
+
+.sect_login form input{
+    width: 50%;
+    height: 5%;
+    margin-bottom: 2%;
+    box-shadow: 0px 0px 10px 0px rgba(255, 242, 2, 1);
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 1%;
+
+
+}
+
+
