@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gidariak</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -22,7 +22,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> -->
 
     <link rel="stylesheet" href="./jjs_style.css">
 </head>
@@ -59,22 +59,22 @@
             <article class="art1">
                 <img src="./jjs.img/pronto.png" alt="Amanecer">
                 <h3>Pronto</h3>
-                <input type="date" name="" id="">
-                <select name="" id="selArt1">
-                    <option value="0" reload disabled>horas</option>
+                <input type="date" onchange="reservas()" name="fecha" id="fecha">
+                <select name="" onchange="reservas()" id="selArt1">
+                    <option value="0" reload >horas</option>
                     <option value="1">08:00</option>
                     <option value="2">09:00</option>
                     <option value="3">10:00</option>
                 </select>
-                <input type="text" disabled>
-                <input type="button" value="Comprar ">
+                <input type="text" disabled oninput="reservas()" id="coste">
+                <input type="button" onclick="reservas()" value="Comprar ">
             </article>
             <article class="art2">
                 <img src="./jjs.img/manana.png" alt="Mañana">
                 <h3>Mañana</h3>
                 <input type="date" name="" id="">
                 <select name="" id="selArt2">
-                    <option value="0" reload disabled>horas</option>
+                    <option value="0" reload >horas</option>
                     <option value="1">11:00</option>
                     <option value="2">12:00</option>
                     <option value="3">13:00</option>
@@ -87,7 +87,7 @@
                 <h3>Mediodia</h3>
                 <input type="date" name="" id="selArt3">
                 <select name="" id="">
-                    <option value="0" reload disabled>horas</option>
+                    <option value="0" reload >horas</option>
                     <option value="1">14:00</option>
                     <option value="2">15:00</option>
                     <option value="3">16:00</option>
@@ -100,7 +100,7 @@
                 <h3>Tarde</h3>
                 <input type="date" name="" id="selArt4">
                 <select name="" id="">
-                    <option value="0" reload disabled>horas</option>
+                    <option value="0" reload >horas</option>
                     <option value="1">17:00</option>
                     <option value="2">18:00</option>
                     <option value="3">19:00</option>
@@ -114,7 +114,7 @@
                 <h3>Noche</h3>
                 <input type="date" name="" id="selArt5">
                 <select name="" id="">
-                    <option value="0" disabled>horas</option>
+                    <option value="0" >horas</option>
                     <option value="1">20:00</option>
                 </select>
 
