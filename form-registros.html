@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./jjs_style.css">
 </head>
 <body>
-    <header class="helmet">
+    <header class="helmet reg">
         <img class="logo" src="./img/logo autoescuela.png" alt="logo">
         <nav class="nav-bar">
             <img class="click" src="./img/menu.png" alt="menu">
             <input type="checkbox" class="click" id="click">
-            <label for="click" class="menu-btn">
+            <label class="labeles" for="click" class="menu-btn">
                 <i class="fas fa-bars"></i>
             </label>
             <ul class="menu">
@@ -27,23 +27,23 @@
     <main class="mai-registro">
         
         <form class="registro" action="" method="get">
-            <h1>Registrate</h1>
+            <h1 id="registrate">Registrate</h1>
             <p>Para acceder a nuestros cursos y <br> ofertas es necesario registrarse.</p>
-            <label for="nombre">Nombre</label>
+            <label class="labeles" class="labeles" for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-            <label for="apellidos">Apellidos</label>
+            <label class="labeles" for="apellidos">Apellidos</label>
             <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-            <label for="dni">DNI</label>
+            <label class="labeles" for="dni">DNI</label>
             <input type="text" name="dni" id="dni" placeholder="DNI">
-            <label for="direccion">Dirección</label>
+            <label class="labeles" for="direccion">Dirección</label>
             <input type="text" name="direccion" id="direccion" placeholder="Dirección">
-            <label for="telefono">Teléfono</label>
+            <label class="labeles" for="telefono">Teléfono</label>
             <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
-            <label for="email">Email</label>
+            <label class="labeles" for="email">Email</label>
             <input type="text" name="email" id="email" placeholder="Email">
-            <label for="contraseña">Contraseña</label>
+            <label class="labeles" for="contraseña">Contraseña</label>
             <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-            <label for="contraseña2">Repetir contraseña</label>
+            <label class="labeles" for="contraseña2">Repetir contraseña</label>
             <input type="password" name="contraseña2" id="contraseña2" placeholder="Repetir contraseña">
             <input type="submit" value="Enviar">
         </form>
