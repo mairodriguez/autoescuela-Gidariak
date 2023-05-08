@@ -152,6 +152,11 @@ nav {
     text-decoration: none;
     color: #111;
 }
+.registro a {
+    text-decoration: none;
+    color: #111;
+    text-decoration: none;
+}
 
 .titulocajaprecio {
     font-size: 1.4rem;
