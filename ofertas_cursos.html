@@ -84,7 +84,7 @@
             </article>
             <article class="art3">
                 <img src="./jjs.img/mediodia.png" alt="Mediodia">
-                <h3 id="comida">Mediodia</h3>
+                <h3 id="comida">Medio Dia</h3>
                 <input type="date" onchange="reservas3()" name="" id="diamd" >
                 <select name="" onchange="reservas3()" id="selArt3">
                     <option value="0" >horas</option>
@@ -92,7 +92,7 @@
                     <option value="2">15:00</option>
                     <option value="3">16:00</option>
                 </select>
-                <input type="text" disabled>
+                <input type="text" id="costemd" disabled>
                 <a href="./factura.html"><input type="button" onclick="reservas3()" value="Comprar "></a>
             </article>
             <article class="art4">
@@ -105,18 +105,18 @@
                     <option value="2">18:00</option>
                     <option value="3">19:00</option>
                 </select>
-                <input type="text" disabled>
+                <input type="text" id="costet" disabled>
                 <a href="./factura.html"><input type="button" onclick="reservas4()" value="Comprar "></a>
             </article>
             <article class="art5">
                 <img src="./jjs.img/noche.png" alt="Noche">
                 <h3 id="cena">Noche</h3>
                 <input type="date" onchange="reservas5()" name="" id="dian">
-                <select name="" id="selArt5">
+                <select name="" onchange="reservas5()" id="selArt5">
                     <option value="0" >horas</option>
                     <option value="1">20:00</option>
                 </select>
-                <input type="text" disabled>
+                <input type="text" id="costen" disabled>
                 <a href="./factura.html"><input type="button" onclick="reservas5()" value="Comprar "></a>
             </article>
         </section>
