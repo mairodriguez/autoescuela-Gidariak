@@ -79,13 +79,6 @@ function reservas() {
         coste.value = precioFinal + ' ' + "€" + '/' + 'H';
         console.log(precioFinal);
     }
-
-
-
-
-
-
-
 }
 
 function reservas2() {
