@@ -29,9 +29,6 @@ function enviar() {
         password: contraseña
     }
 
-   
-    
-
     if (usuario == "" || contraseña == "") {
         alert("No puede haber campos vacíos");
     } else {

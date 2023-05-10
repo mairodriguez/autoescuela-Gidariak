@@ -14,6 +14,19 @@ function log_up() {
     let password = document.getElementById("contraseña").value;
     let password2 = document.getElementById("contraseña2").value;
 
+    //array para un usuarios cogiendo las variables de arriba
+
+    let usuarios = [nombre, apellidos, dni, direccion, telefono, email, password, password2];
+
+
+
+
+    //guardar usuario y contraseña en localhost
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+
+
+
     //Creamos un objeto con los datos del formulario
     let data = {
         nombre: nombre,
@@ -25,15 +38,10 @@ function log_up() {
         password: password,
         password2: password2
     }
+
     //Creamos la url a la que vamos a enviar los datos
 
     let url = "http://localhost:5500/registro";
-
-
-
-
-
-
 
     //Enviamos los datos a la base de datos
     fetch(url, {
@@ -388,60 +396,65 @@ function log_up() {
 
 
 
-// limpiar el formulario
-nombre.value = "";
-apellidos.value = "";
-dni.value = "";
-email.value = "";
-telefono.value = "";
-direccion.value = "";
-password.value = "";
-password2.value = "";
+    // limpiar el formulario
+    nombre.value = "";
+    apellidos.value = "";
+    dni.value = "";
+    email.value = "";
+    telefono.value = "";
+    direccion.value = "";
+    password.value = "";
+    password2.value = "";
 
-// guardar los datos en el localstorage
-localStorage.setItem("nombre", nombre.value);
-localStorage.setItem("apellidos", apellidos.value);
-localStorage.setItem("dni", dni.value);
-localStorage.setItem("email", email.value);
-localStorage.setItem("telefono", telefono.value);
-localStorage.setItem("direccion", direccion.value);
-localStorage.setItem("password", password.value);
+    // guardar los datos en el localstorage
+    localStorage.setItem("nombre", nombre.value);
+    localStorage.setItem("apellidos", apellidos.value);
+    localStorage.setItem("dni", dni.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("telefono", telefono.value);
+    localStorage.setItem("direccion", direccion.value);
+    localStorage.setItem("password", password.value);
 
-// mostrar los datos en el formulario
-document.getElementById("nombre").value = localStorage.getItem("nombre");
-document.getElementById("apellidos").value = localStorage.getItem("apellidos");
-document.getElementById("dni").value = localStorage.getItem("dni");
-document.getElementById("email").value = localStorage.getItem("email");
-document.getElementById("telefono").value = localStorage.getItem("telefono");
-document.getElementById("direccion").value = localStorage.getItem("direccion");
-document.getElementById("password").value = localStorage.getItem("password");
-
-if (localStorage.getItem("nombre") != null) {
+    // mostrar los datos en el formulario
     document.getElementById("nombre").value = localStorage.getItem("nombre");
-}
-if (localStorage.getItem("apellidos") != null) {
     document.getElementById("apellidos").value = localStorage.getItem("apellidos");
-}
-if (localStorage.getItem("dni") != null) {
     document.getElementById("dni").value = localStorage.getItem("dni");
-}
-if (localStorage.getItem("email") != null) {
     document.getElementById("email").value = localStorage.getItem("email");
-}
-if (localStorage.getItem("telefono") != null) {
     document.getElementById("telefono").value = localStorage.getItem("telefono");
-}
-if (localStorage.getItem("direccion") != null) {
     document.getElementById("direccion").value = localStorage.getItem("direccion");
-}
-if (localStorage.getItem("password") != null) {
     document.getElementById("password").value = localStorage.getItem("password");
-}
 
-for (var i = 0; i < localStorage.length; i++) {
-    var clave = localStorage.key(i);
-    var valor = localStorage.getItem(clave);
-    console.log(clave + " = " + valor);
-}
+    if (localStorage.getItem("nombre") != null) {
+        document.getElementById("nombre").value = localStorage.getItem("nombre");
+    }
+    if (localStorage.getItem("apellidos") != null) {
+        document.getElementById("apellidos").value = localStorage.getItem("apellidos");
+    }
+    if (localStorage.getItem("dni") != null) {
+        document.getElementById("dni").value = localStorage.getItem("dni");
+    }
+    if (localStorage.getItem("email") != null) {
+        document.getElementById("email").value = localStorage.getItem("email");
+    }
+    if (localStorage.getItem("telefono") != null) {
+        document.getElementById("telefono").value = localStorage.getItem("telefono");
+    }
+    if (localStorage.getItem("direccion") != null) {
+        document.getElementById("direccion").value = localStorage.getItem("direccion");
+    }
+    if (localStorage.getItem("password") != null) {
+        document.getElementById("password").value = localStorage.getItem("password");
+    }
+
+    for (var i = 0; i < localStorage.length; i++) {
+        var clave = localStorage.key(i);
+        var valor = localStorage.getItem(clave);
+        console.log(clave + " = " + valor);
+    }
+
+    // si los elemntos son validos pasar a la pagina principal
+    if (nombre.value != "" && apellidos.value != "" && dni.value != "" && email.value != "" && telefono.value != "" && direccion.value != "" && password.value != "" && password2.value != "") {
+        location.href = "index.html";
+    }
 }
 
