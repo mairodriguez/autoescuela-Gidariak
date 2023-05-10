@@ -14,11 +14,6 @@ function log_up() {
     let password = document.getElementById("contraseña").value;
     let password2 = document.getElementById("contraseña2").value;
 
-
-
-
-
-
     //Creamos un objeto con los datos del formulario
     let data = {
         nombre: nombre,
