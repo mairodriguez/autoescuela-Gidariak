@@ -3,18 +3,40 @@ function enviar() {
     let usuario = document.getElementById('user').value;
     let contraseña = document.getElementById('password').value;
 
+ // crear array de usuarios y contrañas
+    let usuarios = ["admin", "alumno", "profesor"];
+    let contraseñas = ["admin", "alumno", "profesor"];
+    //guardar usuario y contraseña en localhost
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    localStorage.setItem('contraseñas', JSON.stringify(contraseñas));
+
+    //obtener usuario y contraseña de localstorage
+    usuarios = JSON.parse(localStorage.getItem('usuarios'));
+    contraseñas = JSON.parse(localStorage.getItem('contraseñas'));
+
+    // for para validar usuario y contraseña
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
+            alert("Usuario encontrado");
+            window.location.href = "./";
+        } else {
+            alert("Usuario o contraseña incorrectos");
+        }
+
     // Comprobamos que los campos no estén vacíos
     let datos = {
         user: usuario,
         password: contraseña
     }
 
+   
+    
 
     if (usuario == "" || contraseña == "") {
         alert("No puede haber campos vacíos");
     } else {
         // Enviamos los datos a la API
-        fetch('http://localhost:3000/login', {
+        fetch('http://localhost:5500/login', {
             method: 'POST',
             body: JSON.stringify(datos),
             headers: {
@@ -26,7 +48,7 @@ function enviar() {
             .then(response => {
                 // Si el usuario existe, se le redirige a la página de inicio
                 if (response == "Usuario encontrado") {
-                    window.location.href = "http://localhost:3000/index.html";
+                    window.location.href = "http://localhost:5500/index.html";
                 } else {
                     // Si el usuario no existe, se le muestra un mensaje de error
                     alert("Usuario o contraseña incorrectos");
@@ -65,4 +87,5 @@ function enviar() {
             document.getElementById('user').value = user;
             document.getElementById('password').value = password;
     }
+}
 }

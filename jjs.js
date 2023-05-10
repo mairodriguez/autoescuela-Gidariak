@@ -59,14 +59,12 @@ function reservas() {
     if (opcion == 0) {
         precioFinal = precio[0];
         coste.value = precioFinal + ' ' + "€" + '/' + 'H';
-        descuento = precioFinal * 0.1;
         console.log(precioFinal);
     }
 
     if (opcion == 1) {
         precioFinal = precio[1];
         coste.value = precioFinal + ' ' + "€" + '/' + 'H';
-        descuento = precioFinal * 0.1;
         console.log(precioFinal);
     }
     if (opcion == 2) {
@@ -79,8 +77,32 @@ function reservas() {
         coste.value = precioFinal + ' ' + "€" + '/' + 'H';
         console.log(precioFinal);
     }
-}
 
+
+
+
+    // // guardar dia reservado 
+    // let diaReservado = document.getElementById("diaReservado");
+    // diaReservado.value = dia.value;
+
+    // // guardar hora reservada
+    // let horaReservada = document.getElementById("horaReservada");
+    // horaReservada.value = opcion;
+
+    // // guardar precio final
+    // let precioFinalReserva = document.getElementById("precioFinalReserva");
+    // precioFinalReserva.value = precioFinal;
+
+    // guardar profesor
+    let profesor = document.getElementById("profesor");
+
+    // guardar los datos en el localstorage
+    let datosReserva = {
+        dia: diaReservado.value,
+        hora: horaReservada.value,
+        precio: precioFinalReserva.value,
+        id: idReserva,
+    }
 
 function reservas2() {
     let diam = document.getElementById("diam");

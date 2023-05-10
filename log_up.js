@@ -27,7 +27,12 @@ function log_up() {
     }
     //Creamos la url a la que vamos a enviar los datos
 
-    let url = "http://localhost:3000/registro";
+    let url = "http://localhost:5500/registro";
+
+
+
+
+
 
 
     //Enviamos los datos a la base de datos
@@ -383,7 +388,6 @@ function log_up() {
 
 
 
-
 // limpiar el formulario
 nombre.value = "";
 apellidos.value = "";
@@ -440,5 +444,4 @@ for (var i = 0; i < localStorage.length; i++) {
     console.log(clave + " = " + valor);
 }
 }
-
 
