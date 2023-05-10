@@ -6,11 +6,13 @@
 
 /* ----------header---------- */
 .helmet {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #03037b;
     color: white;
     align-items: center;
+
 }
 
 .logo {
@@ -387,7 +389,7 @@ footer {
         left: -100%;
         background: #111;
         height: 90vh;
-        /* width: 80%; */
+        /* width: 80%;
         text-align: center;
         display: block;
         flex-wrap: wrap;
@@ -675,7 +677,7 @@ footer {
 
 
 
-}
+} 
 
 /* 
 
