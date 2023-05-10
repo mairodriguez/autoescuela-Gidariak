@@ -44,16 +44,16 @@ function log_up() {
         .then(response => console.log('Success:', response));
 
 
-    //Comprobamos que todos los campos esten rellenos
-    if (nombre == "" || apellidos == "" || dni == "" || direccion == "" || telefono == "" || email == "" || password == "" || password2 == "") {
-        alert("Rellene todos los campos");
-        return;
-    }
+    // //Comprobamos que todos los campos esten rellenos
+    // if (nombre == "" || apellidos == "" || dni == "" || direccion == "" || telefono == "" || email == "" || password == "" || password2 == "") {
+    //     alert("Rellene todos los campos");
+    //     return;
+    // }
 
     //Comprobamos que el telefono tenga 9 digitos
     if (telefono.length != 9) {
         alert("El telefono debe tener 9 digitos");
-        return;
+        return console.log(telefono);
     }
 
 

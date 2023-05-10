@@ -64,10 +64,5 @@ function enviar() {
             // Mostramos los datos en el formulario
             document.getElementById('user').value = user;
             document.getElementById('password').value = password;
-            
-        
-
-
-
     }
 }
