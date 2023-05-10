@@ -18,6 +18,21 @@ function log_up() {
 
     let usuarios = [nombre, apellidos, dni, direccion, telefono, email, password, password2];
 
+// array de nombres aleatorios
+
+// array de apellidos ramdon
+
+// array de dni ramdon
+
+// array de direcciones ramdon
+
+// array de telefonos ramdon
+
+// array de emails ramdon
+
+// array de contraseñas ramdon
+
+// array de contraseñas ramdon
 
 
 
@@ -49,7 +64,7 @@ function log_up() {
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
-            
+
         }
 
         //Recibimos la respuesta de la base de datos
