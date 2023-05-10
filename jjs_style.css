@@ -149,6 +149,23 @@
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
+.a_a1{
+    width: 20%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.a_a1 input{
+    width: 100%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
 
 .art1 select {
     width: 20%;
@@ -193,6 +210,23 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+.a_a2{
+    width: 20%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.a_a2 input{
+    width: 100%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
 .art2 select {
     width: 20%;
     height: 100%;
@@ -230,6 +264,23 @@
 .art3 input {
     width: 20%;
     height: 100%;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.a_a3{
+    width: 20%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.a_a3 input{
+    width: 100%;
+    height: 100%;
+    color: #03037b;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -279,6 +330,24 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+.a_a4{
+    width: 20%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.a_a4 input{
+    width: 100%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
 .art4 select {
     width: 20%;
     height: 100%;
@@ -321,8 +390,24 @@
     border-radius: 10px;
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-
 }
+.a_a5{
+    width: 20%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.a_a5 input{
+    width: 100%;
+    height: 100%;
+    color: #03037b;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
 
 .art5 select {
     width: 20%;

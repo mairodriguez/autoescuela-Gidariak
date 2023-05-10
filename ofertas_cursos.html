@@ -55,11 +55,12 @@
             </div>
 
         </section>
+
         <section class="section2-ofertas">
             <article class="art1">
                 <img src="./jjs.img/pronto.png" alt="Amanecer">
                 <h3 id="desayuno">Pronto</h3>
-                <input type="date" onchange="reservas()" name="dia" id="dia">
+                <input type="date" onchange="reservas()" name="dia" id="dia" min="2023-05-10" max="2023-05-31">
                 <select name="" onchange="reservas()" id="selArt1">
                     <option value="0" >horas</option>
                     <option value="1">08:00</option>
@@ -67,33 +68,33 @@
                     <option value="3">10:00</option>
                 </select>
                 <input type="text" disabled  id="coste">
-                <a href="./factura.html"><input type="button" id="camprar" onclick="reservas()" value="Comprar "></a>
+                <a class="a_a1" href="./factura.html"><input type="button" id="camprar" onclick="reservas()" value="Comprar "></a>
             </article>
             <article class="art2">
                 <img src="./jjs.img/manana.png" alt="Mañana">
                 <h3 id="almuerzo">Mañana</h3>
-                <input type="date" onchange="reservas2()" name="" id="diam">
-                <select name="" onchange="reservas2()" id="selArt2">
-                    <option value="0"  >horas</option>
+                <input type="date" name="" id="" min="2023-05-09" max="2023-05-31">
+                <select name="" id="selArt2">
+                    <option value="0" reload >horas</option>
                     <option value="1">11:00</option>
                     <option value="2">12:00</option>
                     <option value="3">13:00</option>
                 </select>
-                <input type="text" id="costem" disabled>
-                <a href="./factura.html"><input type="button" onclick="reservas2()" value="Comprar "></a>
+                <input type="text" disabled>
+                <a class="a_a2"  href="./factura.html"><input type="button" onclick="reservas()" value="Comprar "></a>
             </article>
             <article class="art3">
                 <img src="./jjs.img/mediodia.png" alt="Mediodia">
-                <h3 id="comida">Mediodia</h3>
-                <input type="date" onchange="reservas3()" name="" id="diamd" >
+                <h3 id="comida">Medio Dia</h3>
+                <input type="date" onchange="reservas3()" name="" id="diamd" min="2023-05-09" max="2023-05-31" >
                 <select name="" onchange="reservas3()" id="selArt3">
                     <option value="0" >horas</option>
                     <option value="1">14:00</option>
                     <option value="2">15:00</option>
                     <option value="3">16:00</option>
                 </select>
-                <input type="text" disabled>
-                <a href="./factura.html"><input type="button" onclick="reservas3()" value="Comprar "></a>
+                <input type="text" id="costemd" disabled>
+                <a class="a_a3" href="./factura.html"><input type="button" onclick="reservas3()" value="Comprar "></a>
             </article>
             <article class="art4">
                 <img src="./jjs.img/tarde.png" alt="Tarde">
@@ -105,19 +106,19 @@
                     <option value="2">18:00</option>
                     <option value="3">19:00</option>
                 </select>
-                <input type="text" disabled>
-                <a href="./factura.html"><input type="button" onclick="reservas4()" value="Comprar "></a>
+                <input type="text" id="costet" disabled>
+                <a class="a_a4" href="./factura.html"><input type="button" onclick="reservas4()" value="Comprar "></a>
             </article>
             <article class="art5">
                 <img src="./jjs.img/noche.png" alt="Noche">
                 <h3 id="cena">Noche</h3>
-                <input type="date" onchange="reservas5()" name="" id="dian">
-                <select name="" id="selArt5">
+                <input type="date" onchange="reservas5()" name="" id="dian"  min="2023-05-09" max="2023-05-31">
+                <select name="" onchange="reservas5()" id="selArt5">
                     <option value="0" >horas</option>
                     <option value="1">20:00</option>
                 </select>
-                <input type="text" disabled>
-                <a href="./factura.html"><input type="button" onclick="reservas5()" value="Comprar "></a>
+                <input type="text" id="costen" disabled>
+                <a class="a_a5" href="./factura.html"><input type="button" onclick="reservas5()" value="Comprar "></a>
             </article>
         </section>
 
