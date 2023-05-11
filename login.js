@@ -2,8 +2,34 @@ function enviar() {
     // Obtenemos los datos del formulario
     let usuario = document.getElementById('user').value;
     let contraseña = document.getElementById('password').value;
+    let nomusuario = document.getElementById('nomusuario');
 
- // crear array de usuarios y contrañas
+
+    //si usuario y contraseña son correctos rellenar nomusuario
+    if (usuario == "admin" && contraseña == "admin") {
+        nomusuario.innerHTML = "Administrador";
+    } else if (usuario == "alumno" && contraseña == "alumno") {
+        nomusuario.innerHTML = "Alumno";
+    } else if (usuario == "profesor" && contraseña == "profesor") {
+        nomusuario.innerHTML = "Profesor";
+    } else if (usuario == "" && contraseña == "") {
+        nomusuario.innerHTML = "";
+    } else {
+        nomusuario.innerHTML = "Usuario no encontrado";
+    }
+
+    // si usuario y contraseña son correcta llevar a la pagina de ofertass
+    if (usuario == "admin" && contraseña == "admin") {
+        window.location.href = "./ofertas_cursos.html";
+    } else if (usuario == "alumno" && contraseña == "alumno") {
+        window.location.href = "./ofertas_cursos.html";
+    } else if (usuario == "profesor" && contraseña == "profesor") {
+        window.location.href = "./ofertas_cursos.html";
+    }
+    
+
+
+    // crear array de usuarios y contrañas
     let usuarios = ["admin", "alumno", "profesor"];
     let contraseñas = ["admin", "alumno", "profesor"];
     //guardar usuario y contraseña en localhost
@@ -23,66 +49,66 @@ function enviar() {
             alert("Usuario o contraseña incorrectos");
         }
 
-    // Comprobamos que los campos no estén vacíos
-    let datos = {
-        user: usuario,
-        password: contraseña
-    }
+        // Comprobamos que los campos no estén vacíos
+        let datos = {
+            user: usuario,
+            password: contraseña
+        }
 
-    if (usuario == "" || contraseña == "") {
-        alert("No puede haber campos vacíos");
-    } else {
-        // Enviamos los datos a la API
-        fetch('http://localhost:5500/login', {
-            method: 'POST',
-            body: JSON.stringify(datos),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(res => res.json())
-            .catch(error => console.error('Error:', error))
-            .then(response => {
-                // Si el usuario existe, se le redirige a la página de inicio
-                if (response == "Usuario encontrado") {
-                    window.location.href = "http://localhost:5500/index.html";
-                } else {
-                    // Si el usuario no existe, se le muestra un mensaje de error
-                    alert("Usuario o contraseña incorrectos");
+        if (usuario == "" || contraseña == "") {
+            alert("No puede haber campos vacíos");
+        } else {
+            // Enviamos los datos a la API
+            fetch('http://localhost:5500/login', {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: {
+                    'Content-Type': 'application/json'
                 }
-            });
+            })
+                .then(res => res.json())
+                .catch(error => console.error('Error:', error))
+                .then(response => {
+                    // Si el usuario existe, se le redirige a la página de inicio
+                    if (response == "Usuario encontrado") {
+                        window.location.href = "http://localhost:5500/index.html";
+                    } else {
+                        // Si el usuario no existe, se le muestra un mensaje de error
+                        alert("Usuario o contraseña incorrectos");
+                    }
+                });
 
-        // Limpiamos los campos
-        document.getElementById('user').value = "";
-        document.getElementById('password').value = "";
+            // Limpiamos los campos
+            document.getElementById('user').value = "";
+            document.getElementById('password').value = "";
 
-        if (localStorage.getItem('user') != null) {
-            localStorage.removeItem('user');
-        }
-        if (localStorage.getItem('password') != null) {
-            localStorage.removeItem('password');
-        }
+            if (localStorage.getItem('user') != null) {
+                localStorage.removeItem('user');
+            }
+            if (localStorage.getItem('password') != null) {
+                localStorage.removeItem('password');
+            }
 
-        // Guardamos los datos en el localStorage
-        localStorage.setItem('user', usuario);
-        localStorage.setItem('password', contraseña);
+            // Guardamos los datos en el localStorage
+            localStorage.setItem('user', usuario);
+            localStorage.setItem('password', contraseña);
 
-        // Mostramos los datos por consola
-        console.log(localStorage.getItem('user'));
-        console.log(localStorage.getItem('password'));
+            // Mostramos los datos por consola
+            console.log(localStorage.getItem('user'));
+            console.log(localStorage.getItem('password'));
 
-        // Obtenemos los datos del localStorage
-        let user = localStorage.getItem('user');
-        let password = localStorage.getItem('password');
+            // Obtenemos los datos del localStorage
+            let user = localStorage.getItem('user');
+            let password = localStorage.getItem('password');
 
-        for (let i = 0; i < localStorage.length; i++) {
-            let clave = localStorage.key(i);
-            let valor = localStorage.getItem(clave);
-            console.log(clave + " = " + valor);
-        }
+            for (let i = 0; i < localStorage.length; i++) {
+                let clave = localStorage.key(i);
+                let valor = localStorage.getItem(clave);
+                console.log(clave + " = " + valor);
+            }
             // Mostramos los datos en el formulario
             document.getElementById('user').value = user;
             document.getElementById('password').value = password;
+        }
     }
-}
 }
