@@ -21,6 +21,7 @@
 }
 
 .nav-bar {
+    margin-top: 2%;
     position: relative;
     width: 50%;
     height: 20%;
@@ -473,6 +474,8 @@ footer {
 
     .nav-bar {
         width: 10%;
+        margin-bottom: 5%;
+    
     }
 
     .nav-bar ul {
