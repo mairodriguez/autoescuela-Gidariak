@@ -149,7 +149,8 @@
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.a_a1{
+
+.a_a1 {
     width: 20%;
     height: 100%;
     color: #03037b;
@@ -157,7 +158,8 @@
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.a_a1 input{
+
+.a_a1 input {
     width: 100%;
     height: 100%;
     color: #03037b;
@@ -210,7 +212,7 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-.a_a2{
+.a_a2 {
     width: 20%;
     height: 100%;
     color: #03037b;
@@ -218,7 +220,8 @@
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.a_a2 input{
+
+.a_a2 input {
     width: 100%;
     height: 100%;
     color: #03037b;
@@ -269,7 +272,7 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-.a_a3{
+.a_a3 {
     width: 20%;
     height: 100%;
     color: #03037b;
@@ -277,7 +280,8 @@
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.a_a3 input{
+
+.a_a3 input {
     width: 100%;
     height: 100%;
     color: #03037b;
@@ -330,7 +334,7 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-.a_a4{
+.a_a4 {
     width: 20%;
     height: 100%;
     color: #03037b;
@@ -339,7 +343,7 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-.a_a4 input{
+.a_a4 input {
     width: 100%;
     height: 100%;
     color: #03037b;
@@ -391,7 +395,8 @@
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.a_a5{
+
+.a_a5 {
     width: 20%;
     height: 100%;
     color: #03037b;
@@ -399,7 +404,8 @@
     border: 1px solid #e3e3e3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
-.a_a5 input{
+
+.a_a5 input {
     width: 100%;
     height: 100%;
     color: #03037b;
@@ -474,7 +480,7 @@ footer {
         left: -100%;
         background: #111;
         height: 90vh;
-        /* width: 80%;
+        width: 80%;
         text-align: center;
         display: block;
         flex-wrap: wrap;
@@ -693,21 +699,24 @@ footer {
 
 
     /* MEDIA REGISTRO*/
-   .reg{
-    position: fixed;
-   }
-    .main-registro{
+    .reg {
+        position: fixed;
+    }
+
+    .main-registro {
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100%; 
+        height: 100%;
     }
-    #registrate{
+
+    #registrate {
         margin-top: 15%;
 
     }
+
     .registro {
         display: flex;
         flex-flow: column;
@@ -762,8 +771,39 @@ footer {
 
 
 
-} 
+}
 
+
+
+
+/*resposive para tv 4k*/
+@media (max-width:3840px),
+(max-height:2160px) {
+    .art1 {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .art2 {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .art3 {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .art4 {
+        display: flex;
+        flex-flow: column;
+    }
+    .art5 {
+        display: flex;
+        flex-flow: column;
+    }
+    
+}
 /* 
 
 @media (max-width:768px),

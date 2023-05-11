@@ -433,7 +433,23 @@ function log_up() {
     localStorage.setItem("telefono", telefono.value);
     localStorage.setItem("direccion", direccion.value);
     localStorage.setItem("password", password.value);
+// ENVIAR CORREO DE VALIDACION
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: ""
+        , Password: ""
+        , To: email.value
+        , From: ""
+        , Subject: "Validacion de cuenta"
+        , Body: "Hola, para validar tu cuenta de usuario, haz click en el siguiente enlace: http://localhost:8080/validar.html"
+    }).then(
+        message => alert("mail sent successfully")
+        , error => alert("Error occurred while sending mail")   
+        );
+    
 
+    
+    
     // mostrar los datos en el formulario
     document.getElementById("nombre").value = localStorage.getItem("nombre");
     document.getElementById("apellidos").value = localStorage.getItem("apellidos");
