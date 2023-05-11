@@ -13,6 +13,9 @@ header {
     align-items: center;
 
 }
+header input{
+    color: #000010;
+}
 
 .logo {
     width: 10%;

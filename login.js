@@ -133,14 +133,17 @@ function enviar() {
         }
         // si usuario y contraseña son correcta llevar a la pagina de ofertass  
         if (usuario == "admin" && contraseña == "admin") {
-            window.location.href = "./ofertas_cursos.html";
+            window.location.href = "autoescuela\ofertas_cursos.html";
         }
         else if (usuario == "alumno" && contraseña == "alumno") {
-            window.location.href = "./ofertas_cursos.html";
+            window.location.href = "autoescuela\ofertas_cursos.html";
         }
         else if (usuario == "profesor" && contraseña == "profesor") {
-            window.location.href = "./ofertas_cursos.html";
+            window.location.href = "autoescuela\ofertas_cursos.html";
         }
+    
+
+
 
     }
 }
