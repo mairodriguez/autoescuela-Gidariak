@@ -18,7 +18,7 @@ function enviar() {
     for (let i = 0; i < usuarios.length; i++) {
         if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
             alert("Usuario encontrado");
-            window.location.href = "./";
+            window.location.href = "./INDEX.HTML";
         } else {
             alert("Usuario o contraseña incorrectos");
         }
@@ -51,6 +51,16 @@ function enviar() {
                     alert("Usuario o contraseña incorrectos");
                 }
             });
+            //Si usuario y contraseña son correctos enviar al la pagina principal
+            if (usuario == "admin" && contraseña == "admin") {
+                window.location.href = "./INDEX.HTML";
+            } else if (usuario == "alumno" && contraseña == "alumno") {
+                window.location.href = "./INDEX.HTML";
+            } else if (usuario == "profesor" && contraseña == "profesor") {
+                window.location.href = "./INDEX.HTML";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
 
         // Limpiamos los campos
         document.getElementById('user').value = "";
@@ -84,5 +94,6 @@ function enviar() {
             document.getElementById('user').value = user;
             document.getElementById('password').value = password;
     }
+
 }
 }
