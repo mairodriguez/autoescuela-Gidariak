@@ -21,7 +21,7 @@
             <ul class="menu">
                 <li><a href="/index.html" class="menu1">Inicio</a></li>
                 <li class="menu1"> <a href="#contacto" class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li></a>
-                <input type="text" disabled id="nomusuario">
+                <input type="text" disabled id="nomusuario" oninput=" enviar()">
                 <li class="menu1"><a href="#openModal" class="menu1"> <img src="./img/usuario.png" alt="usuario"> log in</li></a>
                 <li> <img src="./img/ajustes.png" alt="log up"> log up</li>
             </ul>
@@ -32,11 +32,11 @@
                     <a href="#close" title="Close" class="close">X</a>
                     <h1>Log in</h1>
                     <p>Introduce tus datos para acceder a tu cuenta</p>
-                    <form action="" method="post">
+                    <form onchange="enviar()"action="" method="post">
                         <label for="user">Usuario</label>
                         <input type="text" name="user" id="user" >
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" onchange="enviar()">
+                        <input type="password" name="password" id="password" >
                         <form action="./form-registros.html">
                             <input type="submit" value="enviar" class="enviar" />
                     </form>
