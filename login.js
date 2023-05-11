@@ -17,10 +17,10 @@ function enviar() {
     // for para validar usuario y contraseña
     for (let i = 0; i < usuarios.length; i++) {
         if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
-            alert("Usuario encontrado");
+            //alert("usuario encontrado");
             window.location.href = "./INDEX.HTML";
         } else {
-            alert("Usuario o contraseña incorrectos");
+            //alert("usuario o contraseña incorrectos");
         }
 
     // Comprobamos que los campos no estén vacíos
@@ -48,7 +48,7 @@ function enviar() {
                     window.location.href = "http://localhost:5500/index.html";
                 } else {
                     // Si el usuario no existe, se le muestra un mensaje de error
-                    alert("Usuario o contraseña incorrectos");
+                    //alert("usuario o contraseña incorrectos");
                 }
             });
             //Si usuario y contraseña son correctos enviar al la pagina principal
@@ -59,7 +59,7 @@ function enviar() {
             } else if (usuario == "profesor" && contraseña == "profesor") {
                 window.location.href = "./INDEX.HTML";
             } else {
-                alert("Usuario o contraseña incorrectos");
+                //alert("usuario o contraseña incorrectos");
             }
 
         // Limpiamos los campos
