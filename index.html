@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <img class="logo" src="./img/logo autoescuela.png" alt="logo">
+       <a href="./index.html" ><img class="logo" src="./img/logo autoescuela.png" alt="logo"></a> 
         <nav>
             <img class="click" src="./img/menu.png" alt="menu">
             <input type="checkbox" class="click" id="click">
@@ -22,11 +22,29 @@
             <ul class="menu">
                 <li><a href="/index.html" class="menu1"><i class="fas fa-bars"></i>Inicio</a></li>
                 <li class="menu1"> <a href="#contacto" class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li></a>
-                <li class="menu1"> <img src="./img/usuario.png" alt="usuario"> log in</li>
+                <input type="text" disabled id="nomusuario" oninput=" enviar()">
+                <li class="menu1"><a href="#openModal" class="menu1"> <img src="./img/usuario.png" alt="usuario"> log in</li></a>
                 <li> <img src="./img/ajustes.png" alt="log up"> log up</li>
                 <li class="Dark"><i class="fa-solid fa-circle-half-stroke"></i><input style="background-color: yellow;" type="button" value="Dark mode"></li>
             </ul>
         </nav>
+
+        <div id="openModal" class="modalDialog">
+            <div class="sect_login">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h1>Log in</h1>
+                    <p>Introduce tus datos para acceder a tu cuenta</p>
+                    <form onchange="enviar()"action="" method="post">
+                        <label for="user">Usuario</label>
+                        <input type="text" name="user" id="user" >
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" >
+                        <form action="./form-registros.html">
+                            <input type="submit" value="enviar" class="enviar" />
+                    </form>
+                    </form>
+            </div>
+        </div>
     </header>
     <main>
         <section class="contgen">
@@ -151,7 +169,7 @@
             <img src="/img/gorjeo.png" alt="Redes" />
         </div>
     </footer>
-<script src="yus.js"></script>
+    <script src="login.js"></script><script src="yus.js"></script>
 </body>
 
 </html>
