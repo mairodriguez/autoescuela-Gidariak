@@ -132,7 +132,7 @@ function enviar() {
 
 }
 
- Path: auto/autoescuela-Gidariak/ofertas_cursos.html
+// Path: auto/autoescuela-Gidariak/ofertas_cursos.html
 function cargarOfertas() {
     //ofertas
     let ofertas = [
