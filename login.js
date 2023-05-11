@@ -18,7 +18,7 @@ function enviar() {
     for (let i = 0; i < usuarios.length; i++) {
         if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
             //alert("usuario encontrado");
-            window.location.href = "./AUTOESCUELA/OFERTAS_CURSOS.HTML";
+            window.location.href = "./autoescuela/ofertas_cursos.html";
         } else {
             //alert("usuario o contraseña incorrectos");
         }
@@ -53,11 +53,11 @@ function enviar() {
             });
             //Si usuario y contraseña son correctos enviar al la pagina principal
             if (usuario == "admin" && contraseña == "admin") {
-                window.location.href = "./AUTOESCUELA/OFERTAS_CURSOS.HTML";
+                window.location.href = "./autoescuela/ofertas_cursos.html";
             } else if (usuario == "alumno" && contraseña == "alumno") {
-                window.location.href = "./AUTOESCUELA/OFERTAS_CURSOS.HTML";
+                window.location.href = "./autoescuela/ofertas_cursos.html";
             } else if (usuario == "profesor" && contraseña == "profesor") {
-                window.location.href = "./AUTOESCUELA/OFERTAS_CURSOS.HTML";
+                window.location.href = "./autoescuela/ofertas_cursos.html";
             } else {
                 //alert("usuario o contraseña incorrectos");
             }
