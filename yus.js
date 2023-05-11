@@ -1,6 +1,16 @@
-const darkButton = document.querySelector(".Dark input");
+const button = document.querySelector('.Dark input');
+const body = document.querySelector('body');
 
-let hinicio=document.getElementById("tinicio")
-let hfinale=document.getElementById("tfinal")
+let isDarkMode = false;
 
-document.getElementById("btn").addEventListener("click", validar);
+button.addEventListener('click', () => {
+  if (isDarkMode) {
+    body.style.backgroundColor = 'white';
+    body.style.color = 'black';
+    isDarkMode = false;
+  } else {
+    body.style.backgroundColor = 'black';
+    body.style.color = 'gray';
+    isDarkMode = true;
+  }
+});

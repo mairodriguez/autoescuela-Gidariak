@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gidariak</title>
     <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -16,13 +17,14 @@
             <img class="click" src="./img/menu.png" alt="menu">
             <input type="checkbox" class="click" id="click">
             <label for="click" class="menu-btn">
-                <i class="fas fa-bars"></i>
+                
             </label>
             <ul class="menu">
-                <li><a href="/index.html" class="menu1">Inicio</a></li>
+                <li><a href="/index.html" class="menu1"><i class="fas fa-bars"></i>Inicio</a></li>
                 <li class="menu1"> <a href="#contacto" class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li></a>
                 <li class="menu1"> <img src="./img/usuario.png" alt="usuario"> log in</li>
                 <li> <img src="./img/ajustes.png" alt="log up"> log up</li>
+                <li class="Dark"><i class="fa-solid fa-circle-half-stroke"></i><input style="background-color: yellow;" type="button" value="Dark mode"></li>
             </ul>
         </nav>
     </header>
@@ -114,6 +116,21 @@
                     </div>
                 </div>
                 <article class="sectmapa">
+                    <form action="">
+                        
+                            <div class="left">
+                                <label>Nom Complet</label>
+                                <input type="text">
+                                <label>Objet</label>
+                                <input type="text">
+                                <label>Email</label>
+                                <input type="text">
+                                <label>Message</label>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <input type="button" value="Enviar" id="btn-enviar">
+                            </div>
+                            
+                        </form>
                     <div class="mapa">
                         <img id="mapa" src="/img/mapa_españa.jpg" alt="mapa">
                     </div>
@@ -134,7 +151,7 @@
             <img src="/img/gorjeo.png" alt="Redes" />
         </div>
     </footer>
-
+<script src="yus.js"></script>
 </body>
 
 </html>
