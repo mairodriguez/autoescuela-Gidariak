@@ -2,46 +2,40 @@ function enviar() {
     // Obtenemos los datos del formulario
     let usuario = document.getElementById('user').value;
     let contraseña = document.getElementById('password').value;
-    let nomusuario = document.getElementById('nomusuario');
+    let nomusuario = usuario.valor
     console.log('1')
-    // //declarar usuario = usuarios y contraseñas = contraseñas
-    //  usuario = usuarios.length; 
-    //  contraseña = contraseñas.length;
+    
+
+    
+    // console.log(usuario, contraseña);
 
 
-
-
-
-    // guardar  nomusuario en localhost
-    // localStorage.setItem('nomusuario', nomusuario.valueL);
-    //obtener nomusuario de localstorage
-    // nomusuario.valueL = localStorage.getItem('nomusuario');
-    // console.log('2')
-
-    // crear array de usuarios y contrañas
-    let usuarios = ["admin", "alumno", "profesor"];
-    let contraseñas = ["admin", "alumno", "profesor"];
-
-    // for usuario y contraseña son correctos nomusuario
-    // for (let i = 0; i < usuarios.length; i++) {
-    //     if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
-    //         nomusuario.value = usuarios[i];
-    //         console.log(nomusuario.value)
-    //         break
-
-    //     }
-    // } 
-
+    // si usuario y contrasena son correctas rrellenar nomusuario
+    // if (usuario == "admin" && contraseña == "admin") {
+    //      nomusuario.value = "admin"
+    //     console.log(nomusuario)
+    // }
+    // else if (usuario == "alumno" && contraseña == "alumno") {
+    //         nomusuario.value = "alumno"
+    //         console.log(nomusuario)
+    // }
+    // else if (usuario == "profesor" && contraseña == "profesor") {
+    //         nomusuario.value = "profesor"
+    //         console.log(nomusuario)
+    // }
+    
+    
+    // si usuario y contraseña son incorrecta mostrar mensaje de error
     // si usuario y contraseña son correcta llevar a la pagina de ofertass  
     if (usuario == "admin" && contraseña == "admin") {
-        window.location.href = "./autoescuela/ofertas_cursos.html";
+        window.location.href = "../autoescuela/ofertas_cursos.html";
         console.log(usuario, contraseña)
     }
     else if (usuario == "alumno" && contraseña == "alumno") {
-        window.location.href = "./autoescuela/ofertas_cursos.html";
+        window.location.href = "../autoescuela/ofertas_cursos.html";
     }
     else if (usuario == "profesor" && contraseña == "profesor") {
-        window.location.href = "./autoescuela/ofertas_cursos.html";
+        window.location.href = "../autoescuela/ofertas_cursos.html";
     }
     // comprobar campos vacios
     if (usuario == "" || contraseña == "") {
@@ -53,6 +47,7 @@ function enviar() {
         user: usuario,
         password: contraseña
     }
+    console.log(datos)
 
     // Enviamos los datos a la API
     // fetch('http://localhost:5500/login', {
@@ -68,7 +63,7 @@ function enviar() {
     //     })
     //     .then(function (data) {
     //         console.log(data);
-        
+
     //     .then(res => res.json())
     //     .catch(error => console.error('Error:', error))
     //     .then(response => {
