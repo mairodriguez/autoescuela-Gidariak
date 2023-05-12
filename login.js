@@ -2,34 +2,40 @@ function enviar() {
     // Obtenemos los datos del formulario
     let usuario = document.getElementById('user').value;
     let contraseña = document.getElementById('password').value;
-    let nomusuario = document.getElementById('nomusuario');
+    let nomusuario = usuario.valor
     console.log('1')
-    // //declarar usuario = usuarios y contraseñas = contraseñas
-    //  usuario = usuarios.length; 
-    //  contraseña = contraseñas.length;
+    
+
+    
+    // console.log(usuario, contraseña);
 
 
-
-
-
-    // guardar  nomusuario en localhost
-    localStorage.setItem('nomusuario', nomusuario.valueL);
-    //obtener nomusuario de localstorage
-    nomusuario.valueL = localStorage.getItem('nomusuario');
-    console.log('2')
-
-    // crear array de usuarios y contrañas
-    let usuarios = ["admin", "alumno", "profesor"];
-    let contraseñas = ["admin", "alumno", "profesor"];
-
-    // for usuario y contraseña son correctos nomusuario
-    for (let i = 0; i < usuarios.length; i++) {
-        if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
-            nomusuario.value = usuarios[i];
-            console.log(nomusuario.value)
-            break
-        }
-
+    // si usuario y contrasena son correctas rrellenar nomusuario
+    // if (usuario == "admin" && contraseña == "admin") {
+    //      nomusuario.value = "admin"
+    //     console.log(nomusuario)
+    // }
+    // else if (usuario == "alumno" && contraseña == "alumno") {
+    //         nomusuario.value = "alumno"
+    //         console.log(nomusuario)
+    // }
+    // else if (usuario == "profesor" && contraseña == "profesor") {
+    //         nomusuario.value = "profesor"
+    //         console.log(nomusuario)
+    // }
+    
+    
+    // si usuario y contraseña son incorrecta mostrar mensaje de error
+    // si usuario y contraseña son correcta llevar a la pagina de ofertass  
+    if (usuario == "admin" && contraseña == "admin") {
+        window.location.href = "../autoescuela/ofertas_cursos.html";
+        console.log(usuario, contraseña)
+    }
+    else if (usuario == "alumno" && contraseña == "alumno") {
+        window.location.href = "../autoescuela/ofertas_cursos.html";
+    }
+    else if (usuario == "profesor" && contraseña == "profesor") {
+        window.location.href = "../autoescuela/ofertas_cursos.html";
     }
     // comprobar campos vacios
     if (usuario == "" || contraseña == "") {
@@ -41,28 +47,35 @@ function enviar() {
         user: usuario,
         password: contraseña
     }
+    console.log(datos)
 
     // Enviamos los datos a la API
-    fetch('http://localhost:5500/login', {
-        method: 'POST',
-        body: JSON.stringify(datos),
-        headers: {
-            'Content-Type': 'application/json'
-        }
+    // fetch('http://localhost:5500/login', {
+    //     method: 'POST',
+    //     body: JSON.stringify(datos),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
 
-    })
-        .then(res => res.json())
-        .catch(error => console.error('Error:', error))
-        .then(response => {
-            // Si el usuario existe, se le redirige a la página de inicio
-            if (response == "Usuario encontrado") {
-                window.location.href = "http://localhost:5500/autoescuela/ofertas_cursos.html";
-            } else {
-                // Si el usuario no existe, se le muestra un mensaje de error
-                //alert("Usuario o contraseña incorrectos");
-            }
+    // })
+    //     .then(function (response) {
+    //         return response.json();
+    //     })
+    //     .then(function (data) {
+    //         console.log(data);
 
-        });
+    //     .then(res => res.json())
+    //     .catch(error => console.error('Error:', error))
+    //     .then(response => {
+    //         // Si el usuario existe, se le redirige a la página de inicio
+    //         if (response == "Usuario encontrado") {
+    //             window.location.href = "http://localhost:5500/autoescuela/ofertas_cursos.html";
+    //         } else {
+    //             // Si el usuario no existe, se le muestra un mensaje de error
+    //             //alert("Usuario o contraseña incorrectos");
+    //         }
+
+    //     });
 
     // Mostramos los datos en el formulario
     document.getElementById('user').value = usuario;
@@ -70,19 +83,9 @@ function enviar() {
     // Mostramos los datos por consola
     console.log(localStorage.getItem('user'));
     console.log(localStorage.getItem('password'));
-    
 
-    // // si usuario y contraseña son correcta llevar a la pagina de ofertass  
-    // if (usuario == "admin" && contraseña == "admin") {
-    //     window.location.href = "./autoescuela/ofertas_cursos.html";
-    //     console.log(usuario,contraseña)
-    // }
-    // else if (usuario == "alumno" && contraseña == "alumno") {
-    //     window.location.href = "./autoescuela/ofertas_cursos.html";
-    // }
-    // else if (usuario == "profesor" && contraseña == "profesor") {
-    //     window.location.href = "./autoescuela/ofertas_cursos.html";
-    // }
+
+
 
     //guardar usuario y contraseña en localhost
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
@@ -93,14 +96,14 @@ function enviar() {
     contraseñas = JSON.parse(localStorage.getItem('contraseñas'));
 
     // for para validar usuario y contraseña
-    for (let i = 0; i < usuarios.length; i++) {
-        if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
-            //alert("Usuario encontrado");
-            location.href( "../autoescuela/ofertas_cursos.html");
-        } else {
-            //alert("Usuario o contraseña incorrectos");
-        }
-    }
+    // for (let i = 0; i < usuarios.length; i++) {
+    //     if (usuario == usuarios[i] && contraseña == contraseñas[i]) {
+    //         //alert("Usuario encontrado");
+    //         location.href( "../autoescuela/ofertas_cursos.html");
+    //     } else {
+    //         //alert("Usuario o contraseña incorrectos");
+    //     }
+    // }
 
 
     // Limpiamos los campos
@@ -141,6 +144,5 @@ function initMap() {
         document.getElementById('mapa').innerHTML, { zoom: 16, center: autoescuela });
     //crear una variable para el marcador
     var marker = new google.maps.Marker({ position: autoescuela, map: map });
-
 }
 
