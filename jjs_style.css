@@ -40,6 +40,10 @@
     cursor: pointer;
     opacity: 0;
 }
+.menu1 {
+    text-decoration: none;
+    color: white;
+  }
 
 /*------------------ main de ofertas----------------------------*/
 .main-ofertas {
