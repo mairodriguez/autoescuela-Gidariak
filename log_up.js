@@ -1,6 +1,36 @@
+// Version: 1.0
+// Autor:  Gidariak
+// Fecha:  2021/01/08 12:00:00
+
+//php 
+$nombre = $_POST['nombre'];
+$apellidos = $_POST['apellidos'];
+$dni = $_POST['dni'];
+$direccion = $_POST['direccion'];
+$telefono = $_POST['telefono'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$password2 = $_POST['password2'];
+
+//conexion a la base de datos
+$conexion = mysqli_connect("localhost", "root auto", "", "autoescuela");
+
+//consulta para insertar
+$insertar = "INSERT INTO usuarios(nombre, apellidos, dni, direccion, telefono, email, password, password2) VALUES ('$nombre', '$apellidos', '$dni', '$direccion', '$telefono', '$email', '$password', '$password2')";
+//ejecutar consulta
+$resultado = mysqli_query($conexion, $insertar);
+
+if (!$resultado) {
+    echo 
+    'Error al registrarse';
+} else {
+    echo
+    'Usuario registrado exitosamente';
+}
+//cerrar conexion
+mysqli_close($conexion);
+
 // Funcion de registro de usuario
-
-
 function log_up() {
 
     //Recogemos los datos del formulario

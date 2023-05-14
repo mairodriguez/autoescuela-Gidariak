@@ -2,45 +2,97 @@ function enviar() {
     // Obtenemos los datos del formulario
     let usuario = document.getElementById('user').value;
     let contraseña = document.getElementById('password').value;
-    let nomusuario = usuario.valor
+    let nomusuario = document.getElementById('nomusuario')
+    let envia = document.getElementById('envia')
+     //array de usuarios
+     let usuarios = ["admin", "alumno", "profesor"];
+
+     //array de contraseñas
+     let contraseñas = ["admin", "alumno", "profesor"];
+
+   
+
+  
+ 
+ 
+    
+
+
+
+
     console.log('1')
-    
 
-    
-    // console.log(usuario, contraseña);
-
-
-    // si usuario y contrasena son correctas rrellenar nomusuario
+    //rellenar nomusuario al validar usuario y contraseña
     // if (usuario == "admin" && contraseña == "admin") {
-    //      nomusuario.value = "admin"
+    //     nomusuario.value = "admin"
     //     console.log(nomusuario)
     // }
     // else if (usuario == "alumno" && contraseña == "alumno") {
-    //         nomusuario.value = "alumno"
-    //         console.log(nomusuario)
+    //     nomusuario.value = "alumno"
+    //     console.log(nomusuario)
     // }
     // else if (usuario == "profesor" && contraseña == "profesor") {
-    //         nomusuario.value = "profesor"
-    //         console.log(nomusuario)
+    //     nomusuario.value = "profesor"
+    //     console.log(nomusuario)
     // }
-    
-    
-    // si usuario y contraseña son incorrecta mostrar mensaje de error
-    // si usuario y contraseña son correcta llevar a la pagina de ofertass  
+
+
+    // console.log(usuario, contraseña);
+
+
+    // si usuario y contrasena son correctas rellenar nomusuario 
     if (usuario == "admin" && contraseña == "admin") {
-        window.location.href = "../autoescuela/ofertas_cursos.html";
-        console.log(usuario, contraseña)
+        nomusuario.value = "admin"
+        console.log(nomusuario)
     }
     else if (usuario == "alumno" && contraseña == "alumno") {
-        window.location.href = "../autoescuela/ofertas_cursos.html";
+        nomusuario.value = "alumno"
+        console.log(nomusuario)
     }
     else if (usuario == "profesor" && contraseña == "profesor") {
-        window.location.href = "../autoescuela/ofertas_cursos.html";
+        nomusuario.value = "profesor"
+        console.log(nomusuario)
     }
-    // comprobar campos vacios
-    if (usuario == "" || contraseña == "") {
-        alert("No puede haber campos vacíos");
+// cambiar el fondo, el tamaño de la letra y el color de la letra a nomusuario
+    if (nomusuario.value == "admin") {
+        nomusuario.style.backgroundColor = "red"
+        nomusuario.style.fontSize = "20px"
+        nomusuario.style.color = "white"
     }
+    else if (nomusuario.value == "alumno") {
+        nomusuario.style.backgroundColor = "blue"
+        nomusuario.style.fontSize = "20px"
+        nomusuario.style.color = "white"
+    }
+    else if (nomusuario.value == "profesor") {
+        nomusuario.style.backgroundColor = "green"
+        nomusuario.style.fontSize = "20px"
+        nomusuario.style.color = "white"
+    }
+
+//guardar nomusuario en localhost
+    localStorage.setItem('nomusuario', JSON.stringify(nomusuario));
+    
+   
+
+
+    /*  // si usuario y contraseña son correcta llevar a la pagina de ofertass  
+     if (usuario == "admin" && contraseña == "admin") {
+         window.location.href = "../autoescuela/ofertas_cursos.html";
+         console.log(usuario, contraseña)
+     }
+     else if (usuario == "alumno" && contraseña == "alumno") {
+         window.location.href = "../autoescuela/ofertas_cursos.html";
+     }
+     else if (usuario == "profesor" && contraseña == "profesor") {
+         window.location.href = "../autoescuela/ofertas_cursos.html";
+     }
+     // comprobar campos vacios
+     if (usuario == "" || contraseña == "") {
+         alert("No puede haber campos vacíos");
+     }
+ */
+
 
     // Comprobamos que los campos no estén vacíos
     let datos = {
@@ -107,8 +159,8 @@ function enviar() {
 
 
     // Limpiamos los campos
-    document.getElementById('user').value = "";
-    document.getElementById('password').value = "";
+    // document.getElementById('user').value = "";
+    // document.getElementById('password').value = "";
 
     if (localStorage.getItem('user') != null) {
         localStorage.removeItem('user');
@@ -145,4 +197,19 @@ function initMap() {
     //crear una variable para el marcador
     var marker = new google.maps.Marker({ position: autoescuela, map: map });
 }
+
+//aplicacion mapa para la web
+
+function initMap() {
+    //crear una variable para la localizacion de la autoescuela
+    var autoescuela = { lat: 36.721261, lng: -4.421266 };
+    //crear una variable para el mapa
+    var mapas = new google.maps.Map(
+        document.getElementById('mapa').innerHTML, { zoom: 16, center: autoescuela });
+
+    //crear una variable para el marcador
+    var marker = new google.maps.Marker({ position: autoescuela, map: map });
+}
+
+
 
