@@ -17,17 +17,17 @@ function enviar() {
         'usuario22', 'usuario23', 'usuario24', 'usuario25', 'usuario26', 'usuario27', 'usuario28', 'usuario29', 'usuario30']
 
 
+    //nomusuario es igual a usuasios
+    nomusuario = usuarios.length
+
     //nomusuario es igual a envia
     if (usuarios.includes(usuario) && contraseñas.includes(contraseña)) {
         nomusuario.innerHTML = usuario;
-        envia.style.display = "none";
+
         //alert("Usuario y contraseña válidos");
     } else {
-        alert("Usuario y contraseña incorrectos");
+        // alert("Usuario y contraseña incorrectos");
     }
-
-
-
 
 
     // // for envia es igual a usuario y contraseña
@@ -61,58 +61,27 @@ function enviar() {
     // }
 
 
-
-    // si usuario y contrasena son correctas rellenar nomusuario 
-    if (usuario == "admin" && contraseña == "admin") {
-        nomusuario.value = "admin"
-        console.log(nomusuario)
-    }
-    else if (usuario == "alumno" && contraseña == "alumno") {
-        nomusuario.value = "alumno"
-        console.log(nomusuario)
-    }
-    else if (usuario == "profesor" && contraseña == "profesor") {
-        nomusuario.value = "profesor"
-        console.log(nomusuario)
-    }
-    // cambiar el fondo, el tamaño de la letra y el color de la letra a nomusuario
-    if (nomusuario.value == "admin") {
-        nomusuario.style.backgroundColor = "red"
-        nomusuario.style.fontSize = "20px"
-        nomusuario.style.color = "white"
-    }
-    else if (nomusuario.value == "alumno") {
-        nomusuario.style.backgroundColor = "blue"
-        nomusuario.style.fontSize = "20px"
-        nomusuario.style.color = "white"
-    }
-    else if (nomusuario.value == "profesor") {
-        nomusuario.style.backgroundColor = "green"
-        nomusuario.style.fontSize = "20px"
-        nomusuario.style.color = "white"
-    }
-
     //guardar nomusuario en localhost
     localStorage.setItem('nomusuario', JSON.stringify(nomusuario));
 
 
-//      /*
-//      // si usuario y contraseña son correcta llevar a la pagina de ofertass  
-//      if (usuario == "admin" && contraseña == "admin") {
-//          window.location.href = "../autoescuela/ofertas_cursos.html";
-//          console.log(usuario, contraseña)
-//      }
-//      else if (usuario == "alumno" && contraseña == "alumno") {
-//          window.location.href = "../autoescuela/ofertas_cursos.html";
-//      }
-//      else if (usuario == "profesor" && contraseña == "profesor") {
-//          window.location.href = "../autoescuela/ofertas_cursos.html";
-//      }
-//      // comprobar campos vacios
-//      if (usuario == "" || contraseña == "") {
-//          alert("No puede haber campos vacíos");
-//      }
-//      */
+    //      /*
+    //      // si usuario y contraseña son correcta llevar a la pagina de ofertass  
+    //      if (usuario == "admin" && contraseña == "admin") {
+    //          window.location.href = "../autoescuela/ofertas_cursos.html";
+    //          console.log(usuario, contraseña)
+    //      }
+    //      else if (usuario == "alumno" && contraseña == "alumno") {
+    //          window.location.href = "../autoescuela/ofertas_cursos.html";
+    //      }
+    //      else if (usuario == "profesor" && contraseña == "profesor") {
+    //          window.location.href = "../autoescuela/ofertas_cursos.html";
+    //      }
+    //      // comprobar campos vacios
+    //      if (usuario == "" || contraseña == "") {
+    //          alert("No puede haber campos vacíos");
+    //      }
+    //      */
 
 
     // Comprobamos que los campos no estén vacíos
