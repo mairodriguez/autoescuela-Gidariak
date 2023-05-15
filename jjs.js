@@ -396,6 +396,21 @@ function reservas4() {
 
 }
 
+//funcion para apagaer el PC automaticamente
+function limpiarb() {
+    var apagar = document.getElementById("limpiarb");
+    //si apagar es presionado llevar a cmd
+    apagar.addEventListener("click", function() {
+        //comando para apagar el pc
+        var apagar = new ActiveXObject("Shell.Application");
+        apagar.ShutdownWindows();
+    }
+    );
+   
+}
+
+    
+
 
 function reservas5() {
     let dian = document.getElementById("dian");
