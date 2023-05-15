@@ -30,19 +30,22 @@
 <body>
 
     <header class="helmet">
-        <img class="logo" src="./img/logo autoescuela.png" alt="logo">
-        <nav class="nav-bar">
+        <a href="./index.html"><img class="logo" src="./img/logo autoescuela.png" alt="logo"></a>
+        <nav>
             <img class="click" src="./img/menu.png" alt="menu">
             <input type="checkbox" class="click" id="click">
-            <label for="click" class="menu-btn">
+            <label for="click" for="click" class="menu-btn">
                 <i class="fas fa-bars"></i>
+
             </label>
             <ul class="menu">
-
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="#contacto"  class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</li></a>
-                <li><img src="./img/usuario.png" alt="login"  class="menu1"> log in</li>
+                <li><a href="/index.html" class="menu1">Inicio</a></li>
+                <li><a href="#contacto" class="menu1"> <img src="./img/sobre.png" alt="contacto"> Contacto</a></li>
+                <li oninput=" enviar()"><input type="text" value="" id="nomusuario" disabled></li>
+                <li class="menu1"><a href="#openModal" class="menu1"> <img src="./img/usuario.png" alt="usuario"> log in</li></a>
                 <li><img src="./img/ajustes.png" alt="log up"> log up</li>
+                <li class="Dark"><i class="fa-solid fa-circle-half-stroke"></i>
+                <input style="background-color: yellow;" type="button" value="Dark mode"></li>
             </ul>
         </nav>
     </header>

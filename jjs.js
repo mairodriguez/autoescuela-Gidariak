@@ -3,8 +3,6 @@ function reservas() {
     let coste = document.getElementById("coste");
     let precio = [0, 35, 40, 45, 50]
     let fecha = new Date(dia.value);
-
-
     let diaSemana = fecha.getDay(1, 5);
     let precioFinal = 0;
 
@@ -18,9 +16,8 @@ function reservas() {
     if (diaSemana == 1) {
         precioFinal = precio[1];
         //console.log(precioFinal);
-
-
     }
+
     if (diaSemana == 2) {
         precioFinal = precio[2];
         //console.log(precioFinal);
@@ -34,14 +31,13 @@ function reservas() {
         precioFinal = precio[4];
         //console.log(precioFinal);
     }
+
     if (diaSemana == 5) {
         precioFinal = precio[1];
-
         //console.log(precioFinal);
     }
     if (diaSemana == 6 || diaSemana == 0) {
         precioFinal = false;
-
     }
 
     if (precioFinal == false || precioFinal == 0) {
@@ -51,9 +47,7 @@ function reservas() {
         coste.value = precioFinal;
     }
 
-
-
-
+    //seleccion de hora
 
     var selArt1 = document.getElementById('selArt1');
     var opcion = selArt1.options[selArt1.selectedIndex].value;
@@ -67,14 +61,12 @@ function reservas() {
         //console.log(precioFinal);
         //cambiar el color de fondo de coste
         coste.style.backgroundColor = "red";
-
-
     }
 
     if (opcion == 1) {
         precioFinal = precio[1];
         coste.value = precioFinal + ' ' + "€" + '/' + 'H';
-        //console.log(precioFinal);
+        //console.log(precioFinal);31
     }
     if (opcion == 2) {
         precioFinal = precio[2];
@@ -87,8 +79,6 @@ function reservas() {
         //console.log(precioFinal);
 
     }
-
-
 
     // // guardar dia reservado 
     // let diaReservado = document.getElementById("diaReservado");
@@ -127,8 +117,6 @@ function reservas() {
     // //console.log(localStorage.getItem("idReserva"));
     // //console.log(localStorage.getItem(idReserva - 1));
     // //console.log(JSON.parse(localStorage.getItem(idReserva - 1)));
-
-
 }
 
 
@@ -137,9 +125,14 @@ function reservas2() {
     let costem = document.getElementById("costem");
     let preciom = [0, 35, 40, 45, 50]
     let fecham = new Date(diam.value);
-
     let diaSemanam = fecham.getDay(1, 5);
     let precioFinalm = 0;
+
+    //cambiar el color de fonde de fecha
+    dia.style.backgroundColor = "red";
+
+    //aumentar el tamaño
+    dia.style.fontSize = "20px";
 
 
     if (diaSemanam == 1) {
@@ -162,14 +155,12 @@ function reservas2() {
     }
     if (diaSemanam == 5) {
         precioFinalm = preciom[1];
-
         //console.log(precioFinalm);
     }
+
     if (diaSemanam == 6 || diaSemanam == 0) {
         precioFinalm = false;
-
     }
-
 
     if (precioFinalm == false || precioFinalm == 0) {
 
@@ -179,9 +170,7 @@ function reservas2() {
         costem.value = precioFinalm;
     }
 
-
-
-
+    //seleccion de hora
 
     var selArt2 = document.getElementById('selArt2');
     var opcionm = selArt2.options[selArt2.selectedIndex].value;
@@ -215,12 +204,14 @@ function reservas3() {
     let costemd = document.getElementById("costemd");
     let preciomd = [0, 35, 40, 45, 50]
     let fechamd = new Date(diamd.value);
-
     let diaSemanamd = fechamd.getDay(1, 5);
     let precioFinalmd = 0;
 
+    //cambiar el color de fonde de fecha
+    dia.style.backgroundColor = "red";
 
-
+    //aumentar el tamaño
+    dia.style.fontSize = "20px";
 
     if (diaSemanamd == 1) {
         precioFinalmd = preciomd[1];
@@ -252,7 +243,6 @@ function reservas3() {
         costemd.value = precioFinalmd
     }
 
-
     if (precioFinalmd == false || precioFinalmd == 0) {
 
         alert("No se puede reservar para el dia seleccionado");
@@ -263,7 +253,7 @@ function reservas3() {
 
 
 
-
+    //seleccion de hora
 
     var selArt3 = document.getElementById('selArt3');
     var opcionmd = selArt3.options[selArt3.selectedIndex].value;
@@ -295,11 +285,6 @@ function reservas3() {
         //console.log(precioFinalmd);
     }
 
-
-
-
-
-
 }
 
 function reservas4() {
@@ -310,6 +295,11 @@ function reservas4() {
     let diaSemanat = fechat.getDay(1, 5);
     let precioFinalt = 0;
 
+    //cambiar el color de fonde de fecha
+    dia.style.backgroundColor = "red";
+
+    //aumentar el tamaño
+    dia.style.fontSize = "20px";
 
     if (diaSemanat == 1) {
         precioFinalt = preciot[1];
@@ -352,13 +342,6 @@ function reservas4() {
     }
 
 
-
-
-
-
-
-
-
     var selArt4 = document.getElementById('selArt4');
     var opciont = selArt4.options[selArt4.selectedIndex].value;
     document.getElementsByTagName('option');
@@ -389,27 +372,22 @@ function reservas4() {
         //console.log(precioFinal);
     }
 
-
-
-
-
-
 }
 
 //funcion para apagaer el PC automaticamente
 function limpiarb() {
     var apagar = document.getElementById("limpiarb");
     //si apagar es presionado llevar a cmd
-    apagar.addEventListener("click", function() {
+    apagar.addEventListener("click", function () {
         //comando para apagar el pc
         var apagar = new ActiveXObject("Shell.Application");
         apagar.ShutdownWindows();
     }
     );
-   
+
 }
 
-    
+
 
 
 function reservas5() {
@@ -418,8 +396,13 @@ function reservas5() {
     let precion = [0, 35, 40, 45, 50]
     let fechan = new Date(dian.value);
     let diaSemanan = fechan.getDay(1, 5);
-    let precioFinaln = 0;
+    let precioFinaln = 0; ç
 
+    //cambiar el color de fonde de fecha
+    dia.style.backgroundColor = "red";
+
+    //aumentar el tamaño
+    dia.style.fontSize = "20px";
 
 
     if (diaSemanan == 1) {

@@ -4,21 +4,45 @@ function enviar() {
     let contraseña = document.getElementById('password').value;
     let nomusuario = document.getElementById('nomusuario')
     let envia = document.getElementById('envia')
-     //array de usuarios
-     let usuarios = ["admin", "alumno", "profesor"];
+    //array de usuarios con 10 o mas
+    let usuarios = ['admin', 'usuario', 'usuario2', 'usuario3', 'usuario4', 'usuario5', 'usuario6', 'usuario7',
+        'usuario8', 'usuario9', 'usuario10', 'usuario11', 'usuario12', 'usuario13', 'usuario14',
+        'usuario15', 'usuario16', 'usuario17', 'usuario18', 'usuario19', 'usuario20', 'usuario21',
+        'usuario22', 'usuario23', 'usuario24', 'usuario25', 'usuario26', 'usuario27', 'usuario28', 'usuario29', 'usuario30']
 
-     //array de contraseñas
-     let contraseñas = ["admin", "alumno", "profesor"];
-
-   
-
-  
- 
- 
-    
-
+    //array de contraseñas con 10 o mas
+    let contraseñas = ['admin', 'usuario', 'usuario2', 'usuario3', 'usuario4', 'usuario5', 'usuario6', 'usuario7',
+        'usuario8', 'usuario9', 'usuario10', 'usuario11', 'usuario12', 'usuario13', 'usuario14',
+        'usuario15', 'usuario16', 'usuario17', 'usuario18', 'usuario19', 'usuario20', 'usuario21',
+        'usuario22', 'usuario23', 'usuario24', 'usuario25', 'usuario26', 'usuario27', 'usuario28', 'usuario29', 'usuario30']
 
 
+    //nomusuario es igual a envia
+    if (usuarios.includes(usuario) && contraseñas.includes(contraseña)) {
+        nomusuario.innerHTML = usuario;
+        envia.style.display = "none";
+        //alert("Usuario y contraseña válidos");
+    } else {
+        alert("Usuario y contraseña incorrectos");
+    }
+
+
+
+
+
+    // // for envia es igual a usuario y contraseña
+    // if (usuario == nomusuario.value && contraseña == contraseñas[usuarios.indexOf(usuario)]) {
+    //     // Creamos la cookie
+    //     document.cookie = "usuario=" + usuario;
+    //     // Creamos la cookie
+    //     document.cookie = "contraseña=" + contraseña;
+    //     // Creamos la cookie
+    //     document.cookie = "nomusuario=" + nomusuario.value;
+    //     // Creamos la cookie
+    //     document.cookie = "envia=" + envia.value;
+    //     // Creamos la cookie
+    //     document.cookie = "id=" + id.value;
+    // }
 
     console.log('1')
 
@@ -37,8 +61,6 @@ function enviar() {
     // }
 
 
-    // console.log(usuario, contraseña);
-
 
     // si usuario y contrasena son correctas rellenar nomusuario 
     if (usuario == "admin" && contraseña == "admin") {
@@ -53,7 +75,7 @@ function enviar() {
         nomusuario.value = "profesor"
         console.log(nomusuario)
     }
-// cambiar el fondo, el tamaño de la letra y el color de la letra a nomusuario
+    // cambiar el fondo, el tamaño de la letra y el color de la letra a nomusuario
     if (nomusuario.value == "admin") {
         nomusuario.style.backgroundColor = "red"
         nomusuario.style.fontSize = "20px"
@@ -70,28 +92,27 @@ function enviar() {
         nomusuario.style.color = "white"
     }
 
-//guardar nomusuario en localhost
+    //guardar nomusuario en localhost
     localStorage.setItem('nomusuario', JSON.stringify(nomusuario));
-    
-   
 
 
-    /*  // si usuario y contraseña son correcta llevar a la pagina de ofertass  
-     if (usuario == "admin" && contraseña == "admin") {
-         window.location.href = "../autoescuela/ofertas_cursos.html";
-         console.log(usuario, contraseña)
-     }
-     else if (usuario == "alumno" && contraseña == "alumno") {
-         window.location.href = "../autoescuela/ofertas_cursos.html";
-     }
-     else if (usuario == "profesor" && contraseña == "profesor") {
-         window.location.href = "../autoescuela/ofertas_cursos.html";
-     }
-     // comprobar campos vacios
-     if (usuario == "" || contraseña == "") {
-         alert("No puede haber campos vacíos");
-     }
- */
+//      /*
+//      // si usuario y contraseña son correcta llevar a la pagina de ofertass  
+//      if (usuario == "admin" && contraseña == "admin") {
+//          window.location.href = "../autoescuela/ofertas_cursos.html";
+//          console.log(usuario, contraseña)
+//      }
+//      else if (usuario == "alumno" && contraseña == "alumno") {
+//          window.location.href = "../autoescuela/ofertas_cursos.html";
+//      }
+//      else if (usuario == "profesor" && contraseña == "profesor") {
+//          window.location.href = "../autoescuela/ofertas_cursos.html";
+//      }
+//      // comprobar campos vacios
+//      if (usuario == "" || contraseña == "") {
+//          alert("No puede haber campos vacíos");
+//      }
+//      */
 
 
     // Comprobamos que los campos no estén vacíos
@@ -172,18 +193,22 @@ function enviar() {
     // Guardamos los datos en el localStorage
     localStorage.setItem('user', usuario);
     localStorage.setItem('password', contraseña);
-
-
-
     // Obtenemos los datos del localStorage
-    let user = localStorage.getItem('user');
-    let password = localStorage.getItem('password');
+    usuario = localStorage.getItem('user');
+    contraseña = localStorage.getItem('password');
+    // Mostramos los datos en el formulario
+    document.getElementById('user').value = usuario;
+    document.getElementById('password').value = contraseña;
+    // Mostramos los datos por consola
+    console.log(localStorage.getItem('user'));
+    console.log(localStorage.getItem('password'));
 
-    for (let i = 0; i < localStorage.length; i++) {
-        let clave = localStorage.key(i);
-        let valor = localStorage.getItem(clave);
-        console.log(clave + " = " + valor);
-    }
+    //guardar usuario y contraseña en localhost 
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    localStorage.setItem('contraseñas', JSON.stringify(contraseñas));
+    //obtener usuario y contraseña de localstorage
+    usuarios = JSON.parse(localStorage.getItem('usuarios'));
+    contraseñas = JSON.parse(localStorage.getItem('contraseñas'));
 
 
 }
