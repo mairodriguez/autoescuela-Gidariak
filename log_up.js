@@ -1,63 +1,3 @@
-// Version: 1.0
-// Autor:  Gidariak
-// Fecha:  2021/01/08 12:00:00
-
-//php 
-$nombre = $_POST['nombre'];
-$apellidos = $_POST['apellidos'];
-$dni = $_POST['dni'];
-$direccion = $_POST['direccion'];
-$telefono = $_POST['telefono'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$password2 = $_POST['password2'];
-
-//conexion a la base de datos
-$conexion = mysqli_connect("localhost", "root auto", "", "autoescuela");
-
-//consulta para insertar
-$insertar = "INSERT INTO usuarios(nombre, apellidos, dni, direccion, telefono, email, password, password2) VALUES ('$nombre', '$apellidos', '$dni', '$direccion', '$telefono', '$email', '$password', '$password2')";
-//ejecutar consulta
-$resultado = mysqli_query($conexion, $insertar);
-
-if (!$resultado) {
-    echo 
-    'Error al registrarse';
-} else {
-    echo
-    'Usuario registrado exitosamente';
-}
-//cerrar conexion
-mysqli_close($conexion);
-
-//jquery
-$(document).ready(function () {
-    $('#boton').click(function () {
-        var datos = $('#form').serialize();
-        $.ajax({
-            type: "POST",
-            url: "log_up.php",
-            data: datos,
-            success: function (r) {
-                if (r == 1) {
-                    alert("Usuario registrado exitosamente");
-                } else {
-                    alert("Error al registrarse");
-                }
-            }
-        });
-        return false;
-    });
-});
-// Fecha:  2021/01/08 12:00:00
-// Desarrollador:  Alberto Fernandez Garcia
-// Descripcion:  Creacion de pagina log_up.php
-// Version:  1.0
-// Librerias:  jquery
-// Navegadores:  Google Chrome, Firefox, Microsoft Edge, Safari , Opera
-// Path:  autoescuela\log_up.php
-
-
 // Funcion de registro de usuario
 function log_up() {
 
@@ -75,23 +15,42 @@ function log_up() {
     //array para un usuarios cogiendo las variables de arriba
 
     let usuarios = [nombre, apellidos, dni, direccion, telefono, email, password, password2];
+    // nuevo usuario
+    let usuario = {
+        nombre: nombre,
+        apellidos: apellidos,
+        dni: dni,
+        direccion: direccion,
+        telefono: telefono,
+        email: email,
+        password: password,
+        password2: password2
+    }
 
-// array de nombres aleatorios
+    //obtener usuario y contraseña de localstorage
+    usuarios = JSON.parse(localStorage.getItem('usuarios'));
+    // console.log(usuarios);
+    // console.log(usuario);
+    // console.log(usuarios[0]);
+    // console.log(usuario.nombre);
+    // console.log(usuarios[0] == usuario.nombre);
+    // console.log(usuarios[1] == usuario.apellidos);
+    // console.log(usuarios[2] == usuario.dni);
+    // console.log(usuarios[3] == usuario.direccion);
+    // console.log(usuarios[4] == usuario.telefono);
+    // console.log(usuarios[5] == usuario.email);
+    // console.log(usuarios[6] == usuario.password);
+    // console.log(usuarios[7] == usuario.password2);
+    // console.log(usuarios[0] == usuario.nombre && usuarios[1] == usuario.apellidos && usuarios[2] == usuario.dni && usuarios[3] == usuario.direccion && usuarios[4] == usuario.telefono && usuarios[5] == usuario.email && usuarios[6] == usuario.password && usuarios[7] == usuario.password2);
+    // console.log(usuarios[0] == usuario.nombre && usuarios[1] == usuario.apellidos && usuarios[2] == usuario.dni && usuarios[3] == usuario.direccion && usuarios[4] == usuario.telefono && usuarios[5] == usuario.email && usuarios[6] == usuario.password && usuarios[7] == usuario.password2);
 
-// array de apellidos ramdon
-
-// array de dni ramdon
-
-// array de direcciones ramdon
-
-// array de telefonos ramdon
-
-// array de emails ramdon
-
-// array de contraseñas ramdon
-
-// array de contraseñas ramdon
-
+    // for para validar usuario y contraseña
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[0] == usuario.nombre && usuarios[1] == usuario.apellidos && usuarios[2] == usuario.dni && usuarios[3] == usuario.direccion && usuarios[4] == usuario.telefono && usuarios[5] == usuario.email && usuarios[6] == usuario.password && usuarios[7] == usuario.password2) {
+            alert("Usuario ya registrado");
+            return;
+        }
+    }
 
 
     //guardar usuario y contraseña en localhost
@@ -144,7 +103,7 @@ function log_up() {
     if (telefono.length != 9) {
         // // alert("El telefono debe tener 9 digitos");
         return console.log(telefono);
-    }   
+    }
 
 
     //Comprobamos que el DNI tenga 9 caracteres
@@ -491,7 +450,7 @@ function log_up() {
     localStorage.setItem("telefono", telefono.value);
     localStorage.setItem("direccion", direccion.value);
     localStorage.setItem("password", password.value);
-// ENVIAR CORREO DE VALIDACION
+    // ENVIAR CORREO DE VALIDACION
     Email.send({
         Host: "smtp.gmail.com",
         Username: ""
@@ -502,12 +461,12 @@ function log_up() {
         , Body: "Hola, para validar tu cuenta de usuario, haz click en el siguiente enlace: http://localhost:8080/validar.html"
     }).then(
         message => alert("mail sent successfully")
-        , error => alert("Error occurred while sending mail")   
-        );
-    
+        , error => alert("Error occurred while sending mail")
+    );
 
-    
-    
+
+
+
     // mostrar los datos en el formulario
     document.getElementById("nombre").value = localStorage.getItem("nombre");
     document.getElementById("apellidos").value = localStorage.getItem("apellidos");
@@ -548,14 +507,139 @@ function log_up() {
     // si los elemntos son validos pasar a la pagina principal
 
     if (nombre.value != "" && apellidos.value != "" && dni.value != "" &&
-     email.value != "" && telefono.value != "" && direccion.value != "" &&
-      password.value != "" && password2.value != "") {
+        email.value != "" && telefono.value != "" && direccion.value != "" &&
+        password.value != "" && password2.value != "") {
         location.href = "index.html";
     } else {
         // alert("Rellene todos los campos");
     }
 
     // si los elemntos son validos pasar a la pagina principal
- 
+
 }
 
+
+// // Version: 1.0
+// // Autor:  Gidariak
+// // Fecha:  2021/01/08 12:00:00
+
+// // Descripcion:  Creacion de pagina log_up.php
+// Fecha:  2021/01/08 12:00:00
+// Desarrollador:  Alberto Fernandez Garcia
+// Descripcion:  Creacion de pagina log_up.php
+// Version:  1.0
+// Librerias:  jquery
+// Navegadores:  Google Chrome, Firefox, Microsoft Edge, Safari , Opera
+// Path:  autoescuela\log_up.php
+
+// //vuejs
+// var app = new Vue({
+//     el: '#app',
+//     data: {
+//         nombre: '',
+//         apellidos: '',
+//         dni: '',
+//         direccion: '',
+//         telefono: '',
+//         email: '',
+//         password: '',
+//         password2: ''
+//     },
+//     methods: {
+//         enviar: function () {
+//             if (this.nombre != '' && this.apellidos != '' && this.dni != '' && this.direccion != '' && this.telefono != '' && this.email != '' && this.password != '' && this.password2 != '') {
+//                 alert('Usuario registrado exitosamente');
+//             } else {
+//                 alert('Error al registrarse');
+//             }
+//         }
+//     }
+// });
+
+//  //angularjs
+//  var app = angular.module('myApp', []);
+//     app.controller('myCtrl', function ($scope) {
+//         $scope.nombre = '';
+//         $scope.apellidos = '';
+//         $scope.dni = '';
+//         $scope.direccion = '';
+//         $scope.telefono = '';
+//         $scope.email = '';
+//         $scope.password = '';
+//         $scope.password2 = '';
+//         $scope.enviar = function () {
+//             if ($scope.nombre != '' && $scope.apellidos != '' && $scope.dni != '' && $scope.direccion != '' && $scope.telefono != '' && $scope.email != '' && $scope.password != '' && $scope.password2 != '') {
+//                 alert('Usuario registrado exitosamente');
+//             } else {
+//                 alert('Error al registrarse');
+//             }
+//         }
+//     }
+//     );
+//     // //jquery
+//      $(document).ready(function () {
+//         $("#enviar").click(function () {
+//             var nombre = $("#nombre").val();
+//             var apellidos = $("#apellidos").val();
+//             var dni = $("#dni").val();
+//             var direccion = $("#direccion").val();
+//             var telefono = $("#telefono").val();
+//             var email = $("#email").val();
+//             var password = $("#password").val();
+//             var password2 = $("#password2").val();
+//             if (nombre != '' && apellidos != '' && dni != '' && direccion != '' && telefono != '' && email != '' && password != '' && password2 != '') {
+//                 alert('Usuario registrado exitosamente');
+//             } else {
+//                 alert('Error al registrarse');
+//             }
+//         });
+//     });
+//     // //javascript
+//     function enviar() {
+//         var nombre = document.getElementById("nombre").value;
+//         var apellidos = document.getElementById("apellidos").value;
+//         var dni = document.getElementById("dni").value;
+//         var direccion = document.getElementById("direccion").value;
+//         var telefono = document.getElementById("telefono").value;
+//         var email = document.getElementById("email").value;
+//         var password = document.getElementById("password").value;
+//         var password2 = document.getElementById("password2").value;
+//         if (nombre != '' && apellidos != '' && dni != '' && direccion != '' && telefono != '' && email != '' && password != '' && password2 != '') {
+//             alert('Usuario registrado exitosamente');
+//         } else {
+//             alert('Error al registrarse');
+//         }
+//     }
+//     // //typescript
+//      class Usuario {
+//             nombre: string;
+//             apellidos: string;
+//             dni: string;
+//             direccion: string;
+//             telefono: string;
+//             email: string;
+//             password: string;
+//             password2: string;
+//             constructor(nombre: string, apellidos: string, dni: string, direccion: string, telefono: string, email: string, password: string, password2: string) {
+//                 this.nombre = nombre;
+//                 this.apellidos = apellidos;
+//                 this.dni = dni;
+//                 this.direccion = direccion;
+//                 this.telefono = telefono;
+//                 this.email = email;
+//                 this.password = password;
+//                 this.password2 = password2;
+//             }
+//             enviar() {
+//                 if (this.nombre != '' && this.apellidos != '' && this.dni != '' && this.direccion != '' && this.telefono != '' && this.email != '' && this.password != '' && this.password2 != '') {
+//                     alert('Usuario registrado exitosamente');
+//                 } else {
+//                     alert('Error al registrarse');
+//                 }
+//             }
+//         }
+//         var usuario = new Usuario('', '', '', '', '', '', '', '');
+//         usuario.enviar();
+//     // //php
+//     <?php
+//     $nombre = $_POST['nombre'];
