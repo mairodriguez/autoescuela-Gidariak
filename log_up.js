@@ -30,6 +30,34 @@ if (!$resultado) {
 //cerrar conexion
 mysqli_close($conexion);
 
+//jquery
+$(document).ready(function () {
+    $('#boton').click(function () {
+        var datos = $('#form').serialize();
+        $.ajax({
+            type: "POST",
+            url: "log_up.php",
+            data: datos,
+            success: function (r) {
+                if (r == 1) {
+                    alert("Usuario registrado exitosamente");
+                } else {
+                    alert("Error al registrarse");
+                }
+            }
+        });
+        return false;
+    });
+});
+// Fecha:  2021/01/08 12:00:00
+// Desarrollador:  Alberto Fernandez Garcia
+// Descripcion:  Creacion de pagina log_up.php
+// Version:  1.0
+// Librerias:  jquery
+// Navegadores:  Google Chrome, Firefox, Microsoft Edge, Safari , Opera
+// Path:  autoescuela\log_up.php
+
+
 // Funcion de registro de usuario
 function log_up() {
 
