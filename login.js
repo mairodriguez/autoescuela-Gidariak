@@ -23,6 +23,7 @@ function enviar() {
     //nomusuario es igual a envia
     if (usuarios.includes(usuario) && contraseñas.includes(contraseña)) {
         nomusuario.innerHTML = usuario;
+        envia.innerHTML = usuario;
 
         //alert("Usuario y contraseña válidos");
     } else {
@@ -47,41 +48,31 @@ function enviar() {
     console.log('1')
 
     //rellenar nomusuario al validar usuario y contraseña
-    // if (usuario == "admin" && contraseña == "admin") {
-    //     nomusuario.value = "admin"
-    //     console.log(nomusuario)
-    // }
-    // else if (usuario == "alumno" && contraseña == "alumno") {
-    //     nomusuario.value = "alumno"
-    //     console.log(nomusuario)
-    // }
-    // else if (usuario == "profesor" && contraseña == "profesor") {
-    //     nomusuario.value = "profesor"
-    //     console.log(nomusuario)
-    // }
+    nomusuario.innerHTML = usuario;
+    //cuando 
 
 
     //guardar nomusuario en localhost
     localStorage.setItem('nomusuario', JSON.stringify(nomusuario));
 
 
-    //      /*
-    //      // si usuario y contraseña son correcta llevar a la pagina de ofertass  
-    //      if (usuario == "admin" && contraseña == "admin") {
-    //          window.location.href = "../autoescuela/ofertas_cursos.html";
-    //          console.log(usuario, contraseña)
-    //      }
-    //      else if (usuario == "alumno" && contraseña == "alumno") {
-    //          window.location.href = "../autoescuela/ofertas_cursos.html";
-    //      }
-    //      else if (usuario == "profesor" && contraseña == "profesor") {
-    //          window.location.href = "../autoescuela/ofertas_cursos.html";
-    //      }
-    //      // comprobar campos vacios
-    //      if (usuario == "" || contraseña == "") {
-    //          alert("No puede haber campos vacíos");
-    //      }
-    //      */
+
+    // si usuario y contraseña son correcta llevar a la pagina de ofertass  
+    if (usuario == "admin" && contraseña == "admin") {
+        window.location.href = "../autoescuela/ofertas_cursos.html";
+        console.log(usuario, contraseña)
+    }
+    else if (usuario == "alumno" && contraseña == "alumno") {
+        window.location.href = "../autoescuela/ofertas_cursos.html";
+    }
+    else if (usuario == "profesor" && contraseña == "profesor") {
+        window.location.href = "../autoescuela/ofertas_cursos.html";
+    }
+    // comprobar campos vacios
+    if (usuario == "" || contraseña == "") {
+        alert("No puede haber campos vacíos");
+    }
+    //      
 
 
     // Comprobamos que los campos no estén vacíos
