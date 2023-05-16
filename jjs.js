@@ -66,7 +66,7 @@ function reservas() {
     if (opcion == 1) {
         precioFinal = precio[1];
         coste.value = precioFinal + ' ' + "€" + '/' + 'H';
-        //console.log(precioFinal);31
+        //console.log(precioFinal);
     }
     if (opcion == 2) {
         precioFinal = precio[2];
